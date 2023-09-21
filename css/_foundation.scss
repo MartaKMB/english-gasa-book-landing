@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,700;1,400&display=swap');
+
+$base-font-family: 'Lato', sans-serif;
+
+$small-font-title-size: 1.25em;
+$medium-font-title-size: 1.5em;
+$big-font-title-size: 2em;
+$large-font-title-size: 2.25em;
+
+$base-black-font: #2b2b2b;
+$base-yellow: #f0af02;
+$base-green: #63b76a;
+$base-light-blue: #7cc7bd;
+$base-blue: #3e9b9b;
+$base-pink: #f8afb2;
+$base-orange: #d45715;
+$base-baige: #f6e8cc;
+
+$light-yellow: #fcf1da;
+$light-baige: #f6f6f6;
+
+$rgba-base-green: rgba(99, 183, 106, 0.6);
+$rgba-base-pink: rgba(237, 185, 187, 0.6);
+$base-border-radius: 15px;
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(-0.2deg);
+  }
+
+  20% {
+    transform: rotate(0.1deg);
+  }
+
+  40% {
+    transform: rotate(-0.2deg);
+  }
+
+  60% {
+    transform: rotate(0.1deg);
+  }
+
+  90% {
+    transform: rotate(-0.2deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@mixin gasa-button($bckg-color, $font-color, $font-size, $btn-width) {
+  text-transform: uppercase;
+  font-size: $font-size;
+  line-height: 1.3;
+  letter-spacing: 0.15em;
+  padding: 1em;
+  border-radius: $base-border-radius;
+  background-color: $bckg-color;
+  color: $font-color;
+  cursor: pointer;
+  width: $btn-width;
+  margin: 1em 0;
+
+  &:hover {
+    background-color: transparent;
+    color: $bckg-color;
+  }
+
+  &--with-pulse {
+    animation: 1s wiggle ease 10s 10;
+  }
+
+  &--invisible {
+    display: none;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $base-font-family;
+  color: $base-black-font;
+}

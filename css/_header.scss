@@ -1,0 +1,93 @@
+@mixin header-section($color) {
+  width: 100%;
+  max-width: 600px;
+  min-height: 80vh;
+  background-color: $color;
+  position: relative;
+  overflow: hidden;
+}
+
+@mixin header-cricle($color) {
+  content: '';
+  display: block;
+  height: 350px;
+  width: 350px;
+  border: 75px solid $color;
+  border-radius: 50%;
+  position: absolute;
+  top: calc(50% - 200px);
+  box-sizing: border-box;
+}
+
+.gasabook-header {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+
+  &__left-side-header {
+    @include header-section($light-yellow);
+    border-top-left-radius: $base-border-radius;
+    padding-right: 180px;
+    padding-left: 20px;
+
+    &::after {
+      @include header-cricle($base-yellow);
+      right: -175px;
+    }
+  }
+
+  &__right-side-header {
+    @include header-section($base-yellow);
+    border-top-right-radius: $base-border-radius;
+    padding-left: 180px;
+    padding-bottom: calc(100px + 20px);
+
+    &::before {
+      @include header-cricle($light-yellow);
+      left: -175px;
+    }
+  }
+
+  .left-side-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    &__subtitle {
+      font-size: $medium-font-title-size;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    &__title {
+      font-size: $large-font-title-size;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+    }
+
+    &__button {
+      @include gasa-button(
+        $base-black-font,
+        $base-baige,
+        $small-font-title-size,
+        65%
+      );
+      align-self: center;
+    }
+  }
+
+  &__bottom-side-list-header {
+    width: 80%;
+    min-height: 100px;
+    background-color: $base-green;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    border-top-left-radius: $base-border-radius;
+    border-top-right-radius: $base-border-radius;
+  }
+}
