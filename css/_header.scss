@@ -12,11 +12,19 @@
   display: block;
   height: 350px;
   width: 350px;
-  border: 75px solid $color;
+  border: 35px solid $color;
   border-radius: 50%;
   position: absolute;
   top: calc(50% - 200px);
   box-sizing: border-box;
+  z-index: 1;
+}
+
+@mixin header-title($size, $margin) {
+  font-size: $size;
+  text-transform: uppercase;
+  margin-bottom: $margin;
+  z-index: 2;
 }
 
 .gasabook-header {
@@ -30,7 +38,7 @@
   &__left-side-header {
     @include header-section($light-yellow);
     border-top-left-radius: $base-border-radius;
-    padding-right: 180px;
+    padding-right: 80px;
     padding-left: 20px;
 
     &::after {
@@ -42,7 +50,8 @@
   &__right-side-header {
     @include header-section($base-yellow);
     border-top-right-radius: $base-border-radius;
-    padding-left: 180px;
+    padding-left: 80px;
+    padding-right: 20px;
     padding-bottom: calc(100px + 20px);
 
     &::before {
@@ -58,15 +67,11 @@
     align-items: flex-start;
 
     &__subtitle {
-      font-size: $medium-font-title-size;
-      text-transform: uppercase;
-      margin-bottom: 20px;
+      @include header-title($medium-font-title-size, 20px);
     }
 
     &__title {
-      font-size: $large-font-title-size;
-      text-transform: uppercase;
-      margin-bottom: 40px;
+      @include header-title($large-font-title-size, 40px);
     }
 
     &__button {
@@ -77,16 +82,85 @@
         65%
       );
       align-self: center;
+      z-index: 2;
+    }
+  }
+
+  .right-side-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .books-vertical-list {
+      width: 200px;
+      padding-bottom: 2em;
+      max-height: calc(440px + 80px + 3em);
+      overflow: scroll;
+
+      .single-book-element {
+        width: 160px;
+        height: 220px;
+        background-color: $light-yellow;
+        border-top-right-radius: $frame-border-radius;
+        border-top-left-radius: $frame-border-radius;
+        border-bottom-right-radius: $base-border-radius;
+        border-bottom-left-radius: $base-border-radius;
+        position: relative;
+        margin: calc(40px + 1.2em) auto 1em;
+        padding-bottom: 0.25em;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        text-align: center;
+        box-shadow: $base-box-shadow;
+
+        &__book-cover {
+          width: 80px;
+          position: absolute;
+          top: -40px;
+          left: calc(80px - 40px);
+          box-shadow: $base-box-shadow;
+        }
+
+        &__book-price {
+          font-weight: 600;
+          margin: 0.5em auto 0;
+        }
+
+        &__frame-btn {
+          @include gasa-small-frame-button(
+            $light-yellow,
+            $base-black-font,
+            0.75em,
+            80%
+          );
+
+          &:nth-child(3) {
+            font-weight: 600;
+          }
+
+          &--amazon-btn {
+            @include gasa-small-frame-button(
+              $light-yellow,
+              $base-black-font,
+              0.85em,
+              80%
+            );
+          }
+        }
+      }
     }
   }
 
   &__bottom-side-list-header {
     width: 80%;
+    max-width: 1000px;
     min-height: 100px;
     background-color: $base-green;
     position: absolute;
     bottom: 0;
-    left: 10%;
     border-top-left-radius: $base-border-radius;
     border-top-right-radius: $base-border-radius;
   }
