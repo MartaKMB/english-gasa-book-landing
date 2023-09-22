@@ -95,8 +95,6 @@
     .books-vertical-list {
       width: 200px;
       padding-bottom: 2em;
-      max-height: calc(440px + 80px + 3em);
-      overflow: scroll;
 
       .single-book-element {
         width: 160px;
@@ -122,6 +120,12 @@
           top: -40px;
           left: calc(80px - 40px);
           box-shadow: $base-box-shadow;
+
+          &--polish {
+            width: 120px;
+            left: calc(80px - 60px);
+            box-shadow: none;
+          }
         }
 
         &__book-price {
@@ -163,5 +167,25 @@
     bottom: 0;
     border-top-left-radius: $base-border-radius;
     border-top-right-radius: $base-border-radius;
+  }
+
+  @media (min-width: 1200px) {
+    .bottom-side-list-header {
+      &::before {
+        content: '';
+        background: url(../images/author-with-books.PNG) no-repeat center
+          center/cover;
+        position: absolute;
+        top: -400px;
+        left: calc(50% - 200px);
+        height: 400px;
+        width: 400px;
+        z-index: 1;
+      }
+    }
+  }
+  .bottom-side-list-header {
+    &__single-element {
+    }
   }
 }

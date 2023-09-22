@@ -137,8 +137,6 @@
 .gasabook-header .right-side-header .books-vertical-list {
   width: 200px;
   padding-bottom: 2em;
-  max-height: calc(520px + 3em);
-  overflow: scroll;
 }
 .gasabook-header .right-side-header .books-vertical-list .single-book-element {
   width: 160px;
@@ -164,6 +162,11 @@
   top: -40px;
   left: 40px;
   box-shadow: 0px 8px 25px -5px rgb(66, 68, 90);
+}
+.gasabook-header .right-side-header .books-vertical-list .single-book-element__book-cover--polish {
+  width: 120px;
+  left: 20px;
+  box-shadow: none;
 }
 .gasabook-header .right-side-header .books-vertical-list .single-book-element__book-price {
   font-weight: 600;
@@ -211,4 +214,16 @@
   bottom: 0;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+}
+@media (min-width: 1200px) {
+  .gasabook-header .bottom-side-list-header::before {
+    content: "";
+    background: url(../images/author-with-books.PNG) no-repeat center center/cover;
+    position: absolute;
+    top: -400px;
+    left: calc(50% - 200px);
+    height: 400px;
+    width: 400px;
+    z-index: 1;
+  }
 }/*# sourceMappingURL=main.css.map */
