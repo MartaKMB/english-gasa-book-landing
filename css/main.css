@@ -137,6 +137,7 @@
 .gasabook-header .right-side-header .books-vertical-list {
   width: 200px;
   padding-bottom: 2em;
+  z-index: 2;
 }
 .gasabook-header .right-side-header .books-vertical-list .single-book-element {
   width: 160px;
@@ -211,11 +212,18 @@
   min-height: 100px;
   background-color: #63b76a;
   position: absolute;
-  bottom: 0;
+  bottom: -135px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
 }
 @media (min-width: 1200px) {
+  .gasabook-header .bottom-side-list-header {
+    bottom: 0;
+  }
   .gasabook-header .bottom-side-list-header::before {
     content: "";
     background: url(../images/author-with-books.PNG) no-repeat center center/cover;
@@ -226,4 +234,64 @@
     width: 400px;
     z-index: 1;
   }
+}
+.gasabook-header .bottom-side-list-header__single-element {
+  min-width: 33%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.75em 0 0.5em;
+}
+.gasabook-header .bottom-side-list-header .single-element__image {
+  width: 18%;
+  margin-bottom: 0.75em;
+}
+.gasabook-header .bottom-side-list-header .single-element__important-word {
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  font-size: 0.85em;
+}
+
+.author-section {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  padding-top: 135px;
+}
+.author-section__left-side-description {
+  width: 100%;
+  max-width: 600px;
+  min-height: 80vh;
+  position: relative;
+  overflow: hidden;
+}
+.author-section__right-side-image {
+  width: 100%;
+  max-width: 600px;
+  min-height: 80vh;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.author-section__right-side-image::before {
+  content: "";
+  display: block;
+  width: 425px;
+  height: 425px;
+  background-color: #63b76a;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 212.5px);
+  box-sizing: border-box;
+  z-index: 1;
+  border: 35px solid #f0af02;
+}
+.author-section .right-side-image__image {
+  width: 75%;
+  z-index: 2;
 }/*# sourceMappingURL=main.css.map */

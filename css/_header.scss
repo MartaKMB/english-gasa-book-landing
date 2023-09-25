@@ -95,6 +95,7 @@
     .books-vertical-list {
       width: 200px;
       padding-bottom: 2em;
+      z-index: 2;
 
       .single-book-element {
         width: 160px;
@@ -164,13 +165,19 @@
     min-height: 100px;
     background-color: $base-green;
     position: absolute;
-    bottom: 0;
+    bottom: -135px;
     border-top-left-radius: $base-border-radius;
     border-top-right-radius: $base-border-radius;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
   }
 
   @media (min-width: 1200px) {
     .bottom-side-list-header {
+      bottom: 0;
+
       &::before {
         content: '';
         background: url(../images/author-with-books.PNG) no-repeat center
@@ -184,8 +191,28 @@
       }
     }
   }
+
   .bottom-side-list-header {
     &__single-element {
+      min-width: 33%;
+      max-width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0.75em 0 0.5em;
+    }
+
+    .single-element {
+      &__image {
+        width: 18%;
+        margin-bottom: 0.75em;
+      }
+
+      &__important-word {
+        text-transform: uppercase;
+        letter-spacing: 0.5em;
+        font-size: 0.85em;
+      }
     }
   }
 }

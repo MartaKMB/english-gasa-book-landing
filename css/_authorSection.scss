@@ -1,0 +1,48 @@
+@mixin about-with-image-section() {
+  width: 100%;
+  max-width: 600px;
+  min-height: 80vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.author-section {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  padding-top: 135px;
+
+  &__left-side-description {
+    @include about-with-image-section();
+  }
+
+  &__right-side-image {
+    @include about-with-image-section();
+    text-align: center;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 425px;
+      height: 425px;
+      background-color: $base-green;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: calc(50% - 212.5px);
+      box-sizing: border-box;
+      z-index: 1;
+      border: 35px solid $base-yellow;
+    }
+  }
+
+  .right-side-image {
+    &__image {
+      width: 75%;
+      z-index: 2;
+    }
+  }
+}
