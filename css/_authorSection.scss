@@ -6,6 +6,30 @@
   overflow: hidden;
 }
 
+$circle-height: 380px;
+$circle-width: 190px;
+
+@mixin about-section-circle($bckg-color, $border-color) {
+  content: '';
+  display: block;
+  width: $circle-width;
+  height: $circle-height;
+  background-color: $bckg-color;
+  position: absolute;
+  // top: 2rem;
+  bottom: 0;
+  box-sizing: border-box;
+  z-index: -1;
+  border: 20px solid $border-color;
+}
+
+@mixin about-section-title($size, $margin) {
+  font-size: $size;
+  text-transform: uppercase;
+  margin-bottom: $margin;
+  z-index: 2;
+}
+
 .author-section {
   width: 100vw;
   min-height: 100vh;
@@ -17,31 +41,83 @@
 
   &__left-side-description {
     @include about-with-image-section();
+    padding-left: $base-side-padding;
   }
 
   &__right-side-image {
     @include about-with-image-section();
     text-align: center;
+    min-height: $circle-height;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
 
     &::before {
-      content: '';
-      display: block;
-      width: 425px;
-      height: 425px;
-      background-color: $base-green;
-      border-radius: 50%;
-      position: absolute;
-      top: 0;
-      left: calc(50% - 212.5px);
-      box-sizing: border-box;
-      z-index: 1;
-      border: 35px solid $base-yellow;
+      @include about-section-circle($base-green, $base-yellow);
+      left: calc(50% - $circle-width);
+      border-right: none;
+      border-radius: $circle-width 0 0 $circle-width;
+    }
+
+    &::after {
+      @include about-section-circle($base-yellow, $base-green);
+      right: calc(50% - $circle-width);
+      border-left: none;
+      border-radius: 0 $circle-width $circle-width 0;
+    }
+  }
+
+  .left-side-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    &__title {
+      @include about-section-title($big-font-title-size, $title-margin-bottom);
+    }
+
+    &__subtitle {
+      @include about-section-title(
+        $medium-font-title-size,
+        $subtitle-margin-bottom
+      );
+    }
+
+    &__txt-about {
+      margin-bottom: 20px;
+      font-size: 1.15rem;
+      margin-bottom: $subtitle-margin-bottom;
+
+      p {
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    &__hello {
+      font-family: $handwrite-font-family;
+      font-size: $large-font-title-size;
+      color: $base-yellow;
+      margin-bottom: $subtitle-margin-bottom;
+    }
+
+    &__btn-author {
+      @include gasa-small-frame-button(
+        $base-yellow,
+        $base-black-font,
+        1.2rem,
+        200px
+      );
     }
   }
 
   .right-side-image {
     &__image {
+      position: relative;
       width: 75%;
+      min-width: 350px;
+      height: fit-content;
       z-index: 2;
     }
   }

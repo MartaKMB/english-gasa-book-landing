@@ -7,12 +7,14 @@
   overflow: hidden;
 }
 
+$circle-size: 450px;
+
 @mixin header-cricle($color) {
   content: '';
   display: block;
-  height: 350px;
-  width: 350px;
-  border: 35px solid $color;
+  height: $circle-size;
+  width: $circle-size;
+  border: 20px solid $color;
   border-radius: 50%;
   position: absolute;
   top: calc(50% - 200px);
@@ -39,11 +41,11 @@
     @include header-section($light-yellow);
     border-top-left-radius: $base-border-radius;
     padding-right: 80px;
-    padding-left: 20px;
+    padding-left: $base-side-padding;
 
     &::after {
       @include header-cricle($base-yellow);
-      right: -175px;
+      right: calc($circle-size / -2);
     }
   }
 
@@ -56,7 +58,7 @@
 
     &::before {
       @include header-cricle($light-yellow);
-      left: -175px;
+      left: calc($circle-size / -2);
     }
   }
 
@@ -67,11 +69,11 @@
     align-items: flex-start;
 
     &__subtitle {
-      @include header-title($medium-font-title-size, 20px);
+      @include header-title($medium-font-title-size, $subtitle-margin-bottom);
     }
 
     &__title {
-      @include header-title($large-font-title-size, 40px);
+      @include header-title($large-font-title-size, $title-margin-bottom);
     }
 
     &__button {
@@ -94,7 +96,7 @@
 
     .books-vertical-list {
       width: 200px;
-      padding-bottom: 2em;
+      padding-bottom: 2rem;
       z-index: 2;
 
       .single-book-element {
@@ -106,8 +108,8 @@
         border-bottom-right-radius: $base-border-radius;
         border-bottom-left-radius: $base-border-radius;
         position: relative;
-        margin: calc(40px + 1.2em) auto 1em;
-        padding-bottom: 0.25em;
+        margin: calc(40px + 1.2rem) auto 1rem;
+        padding-bottom: 0.25rem;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -138,7 +140,7 @@
           @include gasa-small-frame-button(
             $light-yellow,
             $base-black-font,
-            0.75em,
+            0.75rem,
             80%
           );
 
@@ -150,7 +152,7 @@
             @include gasa-small-frame-button(
               $light-yellow,
               $base-black-font,
-              0.85em,
+              0.85rem,
               80%
             );
           }
@@ -160,23 +162,23 @@
   }
 
   &__bottom-side-list-header {
-    width: 80%;
-    max-width: 1000px;
-    min-height: 100px;
-    background-color: $base-green;
-    position: absolute;
-    bottom: -135px;
-    border-top-left-radius: $base-border-radius;
-    border-top-right-radius: $base-border-radius;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-items: center;
+    display: none;
   }
 
   @media (min-width: 1200px) {
     .bottom-side-list-header {
+      width: 80%;
+      max-width: 1000px;
+      min-height: 100px;
+      background-color: $base-green;
+      position: absolute;
       bottom: 0;
+      border-top-left-radius: $base-border-radius;
+      border-top-right-radius: $base-border-radius;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      align-items: center;
 
       &::before {
         content: '';
@@ -199,19 +201,19 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 0.75em 0 0.5em;
+      padding: 0.75rem 0 0.5rem;
     }
 
     .single-element {
       &__image {
         width: 18%;
-        margin-bottom: 0.75em;
+        margin-bottom: 0.75rem;
       }
 
       &__important-word {
         text-transform: uppercase;
-        letter-spacing: 0.5em;
-        font-size: 0.85em;
+        letter-spacing: 0.5rem;
+        font-size: 0.85rem;
       }
     }
   }
