@@ -110,6 +110,31 @@ $circle-width: 190px;
         200px
       );
     }
+
+    &__social-media-links {
+      width: 80%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: $title-margin-bottom;
+
+      li {
+        list-style-type: none;
+        margin-right: 4rem;
+        width: 60px;
+        height: 60px;
+        background-color: $light-yellow;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: $base-box-shadow;
+
+        i {
+          color: $base-black-font;
+        }
+      }
+    }
   }
 
   .right-side-image {

@@ -53,8 +53,9 @@ $circle-size: 450px;
     @include header-section($base-yellow);
     border-top-right-radius: $base-border-radius;
     padding-left: 80px;
-    padding-right: 20px;
-    padding-bottom: calc(100px + 20px);
+    padding-right: $base-side-padding;
+    padding-bottom: calc(100px + $base-side-padding);
+    padding-top: $base-side-padding;
 
     &::before {
       @include header-cricle($light-yellow);
@@ -162,24 +163,22 @@ $circle-size: 450px;
   }
 
   &__bottom-side-list-header {
-    display: none;
+    width: 80%;
+    max-width: 1000px;
+    min-height: 100px;
+    background-color: $base-green;
+    position: absolute;
+    bottom: 0;
+    border-top-left-radius: $base-border-radius;
+    border-top-right-radius: $base-border-radius;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
   }
 
   @media (min-width: 1200px) {
     .bottom-side-list-header {
-      width: 80%;
-      max-width: 1000px;
-      min-height: 100px;
-      background-color: $base-green;
-      position: absolute;
-      bottom: 0;
-      border-top-left-radius: $base-border-radius;
-      border-top-right-radius: $base-border-radius;
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      align-items: center;
-
       &::before {
         content: '';
         background: url(../images/author-with-books.PNG) no-repeat center
@@ -197,7 +196,7 @@ $circle-size: 450px;
   .bottom-side-list-header {
     &__single-element {
       min-width: 33%;
-      max-width: 300px;
+      max-width: 200px;
       display: flex;
       flex-direction: column;
       align-items: center;

@@ -68,8 +68,9 @@
   overflow: hidden;
   border-top-right-radius: 15px;
   padding-left: 80px;
-  padding-right: 20px;
-  padding-bottom: 120px;
+  padding-right: 1.75rem;
+  padding-bottom: calc(100px + 1.75rem);
+  padding-top: 1.75rem;
 }
 .gasabook-header__right-side-header::before {
   content: "";
@@ -207,23 +208,20 @@
   color: #fcf1da;
 }
 .gasabook-header__bottom-side-list-header {
-  display: none;
+  width: 80%;
+  max-width: 1000px;
+  min-height: 100px;
+  background-color: #63b76a;
+  position: absolute;
+  bottom: 0;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
 }
 @media (min-width: 1200px) {
-  .gasabook-header .bottom-side-list-header {
-    width: 80%;
-    max-width: 1000px;
-    min-height: 100px;
-    background-color: #63b76a;
-    position: absolute;
-    bottom: 0;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-items: center;
-  }
   .gasabook-header .bottom-side-list-header::before {
     content: "";
     background: url(../images/author-with-books.PNG) no-repeat center center/cover;
@@ -237,7 +235,7 @@
 }
 .gasabook-header .bottom-side-list-header__single-element {
   min-width: 33%;
-  max-width: 300px;
+  max-width: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -359,6 +357,28 @@
 .author-section .left-side-description__btn-author:hover {
   background-color: #2b2b2b;
   color: #f0af02;
+}
+.author-section .left-side-description__social-media-links {
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.author-section .left-side-description__social-media-links li {
+  list-style-type: none;
+  margin-right: 4rem;
+  width: 60px;
+  height: 60px;
+  background-color: #fcf1da;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 8px 25px -5px rgb(66, 68, 90);
+}
+.author-section .left-side-description__social-media-links li i {
+  color: #2b2b2b;
 }
 .author-section .right-side-image__image {
   position: relative;
