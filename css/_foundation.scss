@@ -60,18 +60,18 @@ $title-margin-bottom: 40px;
 }
 
 @mixin gasa-button($bckg-color, $font-color, $font-size, $btn-width) {
-  text-transform: uppercase;
-  font-size: $font-size;
-  line-height: 1.3;
-  letter-spacing: 0.15rem;
-  padding: 1em;
-  border-radius: $base-border-radius;
   background-color: $bckg-color;
+  border-radius: $base-border-radius;
+  box-shadow: $base-box-shadow;
   color: $font-color;
   cursor: pointer;
-  width: $btn-width;
+  font-size: $font-size;
+  letter-spacing: 0.15rem;
+  line-height: 1.3;
   margin: 1rem 0;
-  box-shadow: $base-box-shadow;
+  padding: 1em;
+  text-transform: uppercase;
+  width: $btn-width;
 
   &:hover {
     background-color: transparent;
@@ -93,15 +93,15 @@ $title-margin-bottom: 40px;
   $font-size,
   $btn-width
 ) {
-  font-size: $font-size;
-  padding: 0.5rem;
-  border-radius: $base-border-radius;
   background-color: $bckg-color;
+  border-radius: $base-border-radius;
   border: 1px solid $font-color;
   color: $font-color;
   cursor: pointer;
-  width: $btn-width;
+  font-size: $font-size;
   margin: 1rem 0;
+  padding: 0.5rem;
+  width: $btn-width;
 
   &:hover {
     background-color: $font-color;
@@ -110,9 +110,9 @@ $title-margin-bottom: 40px;
 }
 
 * {
+  box-sizing: border-box;
+  color: $base-black-font;
+  font-family: $base-font-family;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: $base-font-family;
-  color: $base-black-font;
 }

@@ -1,79 +1,78 @@
-@mixin about-with-image-section() {
-  width: 100%;
+@mixin about-with-image-section($align-position, $justify-position) {
+  align-items: $align-position;
+  display: flex;
+  flex-direction: column;
+  justify-content: $justify-position;
   max-width: 600px;
   min-height: 80vh;
-  position: relative;
   overflow: hidden;
+  position: relative;
+  width: 100%;
 }
 
 $circle-height: 380px;
 $circle-width: 190px;
 
 @mixin about-section-circle($bckg-color, $border-color) {
-  content: '';
-  display: block;
-  width: $circle-width;
-  height: $circle-height;
   background-color: $bckg-color;
-  position: absolute;
-  // top: 2rem;
+  border: 20px solid $border-color;
   bottom: 0;
   box-sizing: border-box;
+  content: '';
+  display: block;
+  height: $circle-height;
+  position: absolute;
+  width: $circle-width;
   z-index: -1;
-  border: 20px solid $border-color;
 }
 
 @mixin about-section-title($size, $margin) {
   font-size: $size;
-  text-transform: uppercase;
   margin-bottom: $margin;
+  text-transform: uppercase;
   z-index: 2;
 }
 
 .author-section {
-  width: 100vw;
-  min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  position: relative;
+  margin-bottom: $title-margin-bottom;
+  min-height: 100vh;
   padding-top: 135px;
+  position: relative;
+  width: 100vw;
 
   &__left-side-description {
-    @include about-with-image-section();
+    @include about-with-image-section(flex-start, center);
+
     padding-left: $base-side-padding;
   }
 
   &__right-side-image {
-    @include about-with-image-section();
-    text-align: center;
+    @include about-with-image-section(center, flex-end);
+
     min-height: $circle-height;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
+    text-align: center;
 
     &::before {
       @include about-section-circle($base-green, $base-yellow);
-      left: calc(50% - $circle-width);
-      border-right: none;
+
       border-radius: $circle-width 0 0 $circle-width;
+      border-right: none;
+      left: calc(50% - $circle-width);
     }
 
     &::after {
       @include about-section-circle($base-yellow, $base-green);
-      right: calc(50% - $circle-width);
+
       border-left: none;
       border-radius: 0 $circle-width $circle-width 0;
+      right: calc(50% - $circle-width);
     }
   }
 
   .left-side-description {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-
     &__title {
       @include about-section-title($big-font-title-size, $title-margin-bottom);
     }
@@ -86,9 +85,9 @@ $circle-width: 190px;
     }
 
     &__txt-about {
-      margin-bottom: 20px;
       font-size: 1.15rem;
       margin-bottom: $subtitle-margin-bottom;
+      margin-bottom: 20px;
 
       p {
         margin-bottom: 0.5rem;
@@ -96,9 +95,9 @@ $circle-width: 190px;
     }
 
     &__hello {
+      color: $base-yellow;
       font-family: $handwrite-font-family;
       font-size: $large-font-title-size;
-      color: $base-yellow;
       margin-bottom: $subtitle-margin-bottom;
     }
 
@@ -112,23 +111,22 @@ $circle-width: 190px;
     }
 
     &__social-media-links {
-      width: 80%;
+      align-items: center;
       display: flex;
       justify-content: flex-start;
-      align-items: center;
       margin-bottom: $title-margin-bottom;
 
       li {
+        align-items: center;
+        background-color: $light-yellow;
+        border-radius: 50%;
+        box-shadow: $base-box-shadow;
+        display: flex;
+        height: 60px;
+        justify-content: center;
         list-style-type: none;
         margin-right: 4rem;
         width: 60px;
-        height: 60px;
-        background-color: $light-yellow;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-shadow: $base-box-shadow;
 
         i {
           color: $base-black-font;
@@ -139,10 +137,10 @@ $circle-width: 190px;
 
   .right-side-image {
     &__image {
+      height: fit-content;
+      min-width: 350px;
       position: relative;
       width: 75%;
-      min-width: 350px;
-      height: fit-content;
       z-index: 2;
     }
   }
