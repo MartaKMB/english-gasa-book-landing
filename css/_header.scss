@@ -1,74 +1,87 @@
 @mixin header-section($color) {
-  width: 100%;
+  background-color: $color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   max-width: 600px;
   min-height: 80vh;
-  background-color: $color;
-  position: relative;
   overflow: hidden;
+  position: relative;
+  width: 100%;
 }
 
 $circle-size: 450px;
 
 @mixin header-cricle($color) {
+  border-radius: 50%;
+  border: 20px solid $color;
+  box-sizing: border-box;
   content: '';
   display: block;
   height: $circle-size;
-  width: $circle-size;
-  border: 20px solid $color;
-  border-radius: 50%;
   position: absolute;
   top: calc(50% - 200px);
-  box-sizing: border-box;
+  width: $circle-size;
   z-index: 1;
 }
 
 @mixin header-title($size, $margin) {
   font-size: $size;
-  text-transform: uppercase;
   margin-bottom: $margin;
+  text-transform: uppercase;
   z-index: 2;
 }
 
 .gasabook-header {
-  width: 100vw;
-  min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  min-height: 100vh;
   position: relative;
+  width: 100vw;
 
   &__left-side-header {
     @include header-section($light-yellow);
+
+    align-items: flex-start;
     border-top-left-radius: $base-border-radius;
-    padding-right: 80px;
+    border-top-right-radius: $base-border-radius;
     padding-left: $base-side-padding;
+    padding-right: 80px;
 
     &::after {
       @include header-cricle($base-yellow);
+
       right: calc($circle-size / -2);
     }
   }
 
   &__right-side-header {
     @include header-section($base-yellow);
-    border-top-right-radius: $base-border-radius;
-    padding-left: 80px;
-    padding-right: $base-side-padding;
-    padding-bottom: calc(100px + $base-side-padding);
-    padding-top: $base-side-padding;
+
+    align-items: center;
+    padding: $base-side-padding $base-side-padding $base-side-padding 80px;
 
     &::before {
       @include header-cricle($light-yellow);
+
       left: calc($circle-size / -2);
     }
   }
 
-  .left-side-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+  @media (min-width: 1200px) {
+    .left-side-header {
+      border-top-left-radius: none;
+      border-top-right-radius: $base-border-radius;
+    }
 
+    .right-side-header {
+      border-top-right-radius: $base-border-radius;
+      padding-bottom: calc(100px + $base-side-padding);
+    }
+  }
+
+  .left-side-header {
     &__subtitle {
       @include header-title($medium-font-title-size, $subtitle-margin-bottom);
     }
@@ -84,51 +97,47 @@ $circle-size: 450px;
         $small-font-title-size,
         65%
       );
+
       align-self: center;
       z-index: 2;
     }
   }
 
   .right-side-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
     .books-vertical-list {
-      width: 200px;
       padding-bottom: 2rem;
+      width: 200px;
       z-index: 2;
 
       .single-book-element {
-        width: 160px;
-        height: 220px;
+        align-items: center;
         background-color: $light-yellow;
-        border-top-right-radius: $frame-border-radius;
-        border-top-left-radius: $frame-border-radius;
-        border-bottom-right-radius: $base-border-radius;
         border-bottom-left-radius: $base-border-radius;
-        position: relative;
-        margin: calc(40px + 1.2rem) auto 1rem;
-        padding-bottom: 0.25rem;
+        border-bottom-right-radius: $base-border-radius;
+        border-top-left-radius: $frame-border-radius;
+        border-top-right-radius: $frame-border-radius;
+        box-shadow: $base-box-shadow;
         display: flex;
         flex-direction: column;
+        height: 220px;
         justify-content: flex-end;
-        align-items: center;
+        margin: calc(40px + 1.2rem) auto 1rem;
+        padding-bottom: 0.25rem;
+        position: relative;
         text-align: center;
-        box-shadow: $base-box-shadow;
+        width: 160px;
 
         &__book-cover {
-          width: 80px;
+          box-shadow: $base-box-shadow;
+          left: calc(80px - 40px);
           position: absolute;
           top: -40px;
-          left: calc(80px - 40px);
-          box-shadow: $base-box-shadow;
+          width: 80px;
 
           &--polish {
-            width: 120px;
-            left: calc(80px - 60px);
             box-shadow: none;
+            left: calc(80px - 60px);
+            width: 120px;
           }
         }
 
@@ -163,30 +172,32 @@ $circle-size: 450px;
   }
 
   &__bottom-side-list-header {
-    width: 80%;
-    max-width: 1000px;
-    min-height: 100px;
-    background-color: $base-green;
-    position: absolute;
-    bottom: 0;
-    border-top-left-radius: $base-border-radius;
-    border-top-right-radius: $base-border-radius;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-items: center;
+    display: none;
   }
 
   @media (min-width: 1200px) {
     .bottom-side-list-header {
+      align-items: center;
+      background-color: $base-green;
+      border-top-left-radius: $base-border-radius;
+      border-top-right-radius: $base-border-radius;
+      bottom: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      max-width: 1000px;
+      min-height: 100px;
+      position: absolute;
+      width: 80%;
+
       &::before {
-        content: '';
         background: url(../images/author-with-books.PNG) no-repeat center
           center/cover;
+        content: '';
+        height: 400px;
+        left: calc(50% - 200px);
         position: absolute;
         top: -400px;
-        left: calc(50% - 200px);
-        height: 400px;
         width: 400px;
         z-index: 1;
       }
@@ -195,24 +206,24 @@ $circle-size: 450px;
 
   .bottom-side-list-header {
     &__single-element {
-      min-width: 33%;
-      max-width: 200px;
+      align-items: center;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      max-width: 200px;
+      min-width: 33%;
       padding: 0.75rem 0 0.5rem;
     }
 
     .single-element {
       &__image {
-        width: 18%;
         margin-bottom: 0.75rem;
+        width: 18%;
       }
 
       &__important-word {
-        text-transform: uppercase;
-        letter-spacing: 0.5rem;
         font-size: 0.85rem;
+        letter-spacing: 0.5rem;
+        text-transform: uppercase;
       }
     }
   }

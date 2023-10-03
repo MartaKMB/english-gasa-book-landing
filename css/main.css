@@ -28,79 +28,88 @@
 }
 
 .gasabook-header {
-  width: 100vw;
-  min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  min-height: 100vh;
   position: relative;
+  width: 100vw;
 }
 .gasabook-header__left-side-header {
-  width: 100%;
+  background-color: #fcf1da;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   max-width: 600px;
   min-height: 80vh;
-  background-color: #fcf1da;
-  position: relative;
   overflow: hidden;
+  position: relative;
+  width: 100%;
+  align-items: flex-start;
   border-top-left-radius: 15px;
-  padding-right: 80px;
+  border-top-right-radius: 15px;
   padding-left: 1.75rem;
+  padding-right: 80px;
 }
 .gasabook-header__left-side-header::after {
+  border-radius: 50%;
+  border: 20px solid #f0af02;
+  box-sizing: border-box;
   content: "";
   display: block;
   height: 450px;
-  width: 450px;
-  border: 20px solid #f0af02;
-  border-radius: 50%;
   position: absolute;
   top: calc(50% - 200px);
-  box-sizing: border-box;
+  width: 450px;
   z-index: 1;
   right: -225px;
 }
 .gasabook-header__right-side-header {
-  width: 100%;
-  max-width: 600px;
-  min-height: 80vh;
   background-color: #f0af02;
-  position: relative;
-  overflow: hidden;
-  border-top-right-radius: 15px;
-  padding-left: 80px;
-  padding-right: 1.75rem;
-  padding-bottom: calc(100px + 1.75rem);
-  padding-top: 1.75rem;
-}
-.gasabook-header__right-side-header::before {
-  content: "";
-  display: block;
-  height: 450px;
-  width: 450px;
-  border: 20px solid #fcf1da;
-  border-radius: 50%;
-  position: absolute;
-  top: calc(50% - 200px);
-  box-sizing: border-box;
-  z-index: 1;
-  left: -225px;
-}
-.gasabook-header .left-side-header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  max-width: 600px;
+  min-height: 80vh;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  align-items: center;
+  padding: 1.75rem 1.75rem 1.75rem 80px;
+}
+.gasabook-header__right-side-header::before {
+  border-radius: 50%;
+  border: 20px solid #fcf1da;
+  box-sizing: border-box;
+  content: "";
+  display: block;
+  height: 450px;
+  position: absolute;
+  top: calc(50% - 200px);
+  width: 450px;
+  z-index: 1;
+  left: -225px;
+}
+@media (min-width: 1200px) {
+  .gasabook-header .left-side-header {
+    border-top-left-radius: none;
+    border-top-right-radius: 15px;
+  }
+  .gasabook-header .right-side-header {
+    border-top-right-radius: 15px;
+    padding-bottom: calc(100px + 1.75rem);
+  }
 }
 .gasabook-header .left-side-header__subtitle {
   font-size: 1.5rem;
-  text-transform: uppercase;
   margin-bottom: 20px;
+  text-transform: uppercase;
   z-index: 2;
 }
 .gasabook-header .left-side-header__title {
   font-size: 2.25rem;
-  text-transform: uppercase;
   margin-bottom: 40px;
+  text-transform: uppercase;
   z-index: 2;
 }
 .gasabook-header .left-side-header__button {
@@ -129,46 +138,40 @@
 .gasabook-header .left-side-header__button--invisible {
   display: none;
 }
-.gasabook-header .right-side-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 .gasabook-header .right-side-header .books-vertical-list {
-  width: 200px;
   padding-bottom: 2rem;
+  width: 200px;
   z-index: 2;
 }
 .gasabook-header .right-side-header .books-vertical-list .single-book-element {
-  width: 160px;
-  height: 220px;
+  align-items: center;
   background-color: #fcf1da;
-  border-top-right-radius: 35%;
-  border-top-left-radius: 35%;
-  border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
-  position: relative;
-  margin: calc(40px + 1.2rem) auto 1rem;
-  padding-bottom: 0.25rem;
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 35%;
+  border-top-right-radius: 35%;
+  box-shadow: 0px 8px 25px -5px rgb(66, 68, 90);
   display: flex;
   flex-direction: column;
+  height: 220px;
   justify-content: flex-end;
-  align-items: center;
+  margin: calc(40px + 1.2rem) auto 1rem;
+  padding-bottom: 0.25rem;
+  position: relative;
   text-align: center;
-  box-shadow: 0px 8px 25px -5px rgb(66, 68, 90);
+  width: 160px;
 }
 .gasabook-header .right-side-header .books-vertical-list .single-book-element__book-cover {
-  width: 80px;
+  box-shadow: 0px 8px 25px -5px rgb(66, 68, 90);
+  left: 40px;
   position: absolute;
   top: -40px;
-  left: 40px;
-  box-shadow: 0px 8px 25px -5px rgb(66, 68, 90);
+  width: 80px;
 }
 .gasabook-header .right-side-header .books-vertical-list .single-book-element__book-cover--polish {
-  width: 120px;
-  left: 20px;
   box-shadow: none;
+  left: 20px;
+  width: 120px;
 }
 .gasabook-header .right-side-header .books-vertical-list .single-book-element__book-price {
   font-weight: 600;
@@ -208,47 +211,50 @@
   color: #fcf1da;
 }
 .gasabook-header__bottom-side-list-header {
-  width: 80%;
-  max-width: 1000px;
-  min-height: 100px;
-  background-color: #63b76a;
-  position: absolute;
-  bottom: 0;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  align-items: center;
+  display: none;
 }
 @media (min-width: 1200px) {
+  .gasabook-header .bottom-side-list-header {
+    align-items: center;
+    background-color: #63b76a;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1000px;
+    min-height: 100px;
+    position: absolute;
+    width: 80%;
+  }
   .gasabook-header .bottom-side-list-header::before {
-    content: "";
     background: url(../images/author-with-books.PNG) no-repeat center center/cover;
+    content: "";
+    height: 400px;
+    left: calc(50% - 200px);
     position: absolute;
     top: -400px;
-    left: calc(50% - 200px);
-    height: 400px;
     width: 400px;
     z-index: 1;
   }
 }
 .gasabook-header .bottom-side-list-header__single-element {
-  min-width: 33%;
-  max-width: 200px;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  max-width: 200px;
+  min-width: 33%;
   padding: 0.75rem 0 0.5rem;
 }
 .gasabook-header .bottom-side-list-header .single-element__image {
-  width: 18%;
   margin-bottom: 0.75rem;
+  width: 18%;
 }
 .gasabook-header .bottom-side-list-header .single-element__important-word {
-  text-transform: uppercase;
-  letter-spacing: 0.5rem;
   font-size: 0.85rem;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
 }
 
 .author-section {
