@@ -39,12 +39,12 @@ $circle-width: 190px;
   justify-content: center;
   margin-bottom: $title-margin-bottom;
   min-height: 100vh;
-  padding-top: 135px;
+  padding-top: $title-margin-bottom;
   position: relative;
   width: 100vw;
 
   &__left-side-description {
-    @include about-with-image-section(flex-start, center);
+    @include about-with-image-section(flex-start, flex-end);
 
     padding-left: $base-side-padding;
   }

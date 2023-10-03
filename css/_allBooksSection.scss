@@ -1,0 +1,91 @@
+.books-list-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: $title-margin-bottom;
+  min-height: 100vh;
+  padding-top: $title-margin-bottom;
+  position: relative;
+  width: 100vw;
+
+  &__title {
+    font-size: $medium-font-title-size;
+    margin-bottom: $title-margin-bottom;
+    text-transform: uppercase;
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__books-horizontal-list {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .books-horizontal-list {
+    .single-book-element {
+      // WIP
+      align-items: center;
+      background-color: $light-yellow;
+      border-bottom-left-radius: $base-border-radius;
+      border-bottom-right-radius: $base-border-radius;
+      border-top-left-radius: $frame-border-radius;
+      border-top-right-radius: $frame-border-radius;
+      box-shadow: $base-box-shadow;
+      display: flex;
+      flex-direction: column;
+      height: 220px;
+      justify-content: flex-end;
+      margin: calc(40px + 1.2rem) auto 1rem;
+      padding-bottom: 0.25rem;
+      position: relative;
+      text-align: center;
+      width: 160px;
+
+      //   &__book-cover {
+      //     box-shadow: $base-box-shadow;
+      //     left: calc(80px - 40px);
+      //     position: absolute;
+      //     top: -40px;
+      //     width: 80px;
+
+      //     &--polish {
+      //       box-shadow: none;
+      //       left: calc(80px - 60px);
+      //       width: 120px;
+      //     }
+      //   }
+
+      //   &__book-price {
+      //     font-weight: 600;
+      //     margin: 0.5em auto 0;
+      //   }
+
+      //   &__frame-btn {
+      //     @include gasa-small-frame-button(
+      //       $light-yellow,
+      //       $base-black-font,
+      //       0.75rem,
+      //       80%
+      //     );
+
+      //     &:nth-child(3) {
+      //       font-weight: 600;
+      //     }
+
+      //     &--amazon-btn {
+      //       @include gasa-small-frame-button(
+      //         $light-yellow,
+      //         $base-black-font,
+      //         0.85rem,
+      //         80%
+      //       );
+      //     }
+      //   }
+    }
+  }
+}
