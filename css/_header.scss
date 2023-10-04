@@ -154,8 +154,17 @@ $circle-size: 450px;
             80%
           );
 
-          &:nth-child(3) {
-            font-weight: 600;
+          position: relative;
+
+          &::after {
+            content: '🇵🇱';
+            display: block;
+            width: 20px;
+            height: 20px;
+            font-size: 18px;
+            position: absolute;
+            top: -14px;
+            right: -8px;
           }
 
           &--amazon-btn {
