@@ -1,30 +1,31 @@
 .books-list-section {
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: center;
-  margin-bottom: $title-margin-bottom;
-  min-height: 100vh;
-  padding-top: $title-margin-bottom;
+  margin: 0 auto $title-margin-bottom;
+  max-width: 1200px;
+  min-height: 95vh;
+  padding: $base-side-padding $title-margin-bottom $base-side-padding;
   position: relative;
   width: 100vw;
+  background-color: $base-yellow;
 
   &__title {
-    font-size: $medium-font-title-size;
+    font-size: $big-font-title-size;
     margin-bottom: $title-margin-bottom;
     text-transform: uppercase;
-    z-index: 2;
     width: 100%;
-    text-align: center;
+    z-index: 2;
   }
 
   &__books-horizontal-list {
-    width: 100%;
-    max-width: 1200px;
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
+    margin-top: $subtitle-margin-bottom;
+    width: 100%;
   }
 
   .books-horizontal-list {
@@ -76,12 +77,12 @@
         &::after {
           content: '🇵🇱';
           display: block;
-          width: 20px;
-          height: 20px;
           font-size: 18px;
+          height: 20px;
           position: absolute;
-          top: -14px;
           right: -8px;
+          top: -14px;
+          width: 20px;
         }
 
         &--amazon-btn {

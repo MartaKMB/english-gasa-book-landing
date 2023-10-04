@@ -4,4 +4,7 @@ $(function () {
   $('#for-all-books-section').load(
     '/html/allBooksSection.html #all-books-component'
   );
+  $('#for-book-inside-section').load(
+    '/html/bookInsideSection.html #book-inside-component'
+  );
 });
