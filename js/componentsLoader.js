@@ -7,4 +7,5 @@ $(function () {
   $('#for-book-inside-section').load(
     '/html/bookInsideSection.html #book-inside-component'
   );
+  $('#for-review-section').load('/html/reviewSection.html #review-component');
 });
