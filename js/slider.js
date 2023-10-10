@@ -1,25 +1,24 @@
 $(window).on('pageshow', function () {
-  console.log('jest!');
-  var $slide = $('.slide'),
+  const $slide = $('.slide'),
     $slideGroup = $('.slide-group'),
     $bullet = $('.bullet');
 
-  var slidesTotal = $slide.length - 1,
+  let slidesTotal = $slide.length - 1,
     current = 0,
     isAutoSliding = true;
 
   $bullet.first().addClass('current');
 
-  var clickSlide = function () {
+  const clickSlide = function () {
     window.clearInterval(autoSlide);
     isAutoSliding = false;
 
-    var slideIndex = $bullet.index($(this));
+    let slideIndex = $bullet.index($(this));
 
     updateIndex(slideIndex);
   };
 
-  var updateIndex = function (currentSlide) {
+  const updateIndex = function (currentSlide) {
     if (isAutoSliding) {
       if (current === slidesTotal) {
         current = 0;
@@ -36,7 +35,7 @@ $(window).on('pageshow', function () {
     transition(current);
   };
 
-  var transition = function (slidePosition) {
+  const transition = function (slidePosition) {
     $slideGroup.animate({
       top: '-' + slidePosition + '00%',
     });
@@ -44,7 +43,5 @@ $(window).on('pageshow', function () {
 
   $bullet.on('click', clickSlide);
 
-  var autoSlide = window.setInterval(updateIndex, 2000);
+  const autoSlide = window.setInterval(updateIndex, 5000);
 });
-
-// code from: https://codepen.io/jurbank/pen/AGNwxK

@@ -49,6 +49,30 @@
     width: 100%;
   }
 
+  .slide-wrap {
+    &__slide-nav {
+      text-align: center;
+
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+
+      .bullet {
+        background: $light-yellow;
+        cursor: pointer;
+        display: inline-block;
+        height: 10px;
+        margin-left: 0.5em;
+        width: 10px;
+      }
+
+      .bullet.current {
+        background: $base-pink;
+      }
+    }
+  }
+
   .slide-group {
     &__single-review {
       align-items: flex-start;
@@ -120,28 +144,6 @@
       max-width: 500px;
       translate: -20%;
       z-index: 2;
-
-      &__slide-nav {
-        text-align: center;
-
-        ul {
-          margin: 0;
-          padding: 0;
-        }
-
-        .bullet {
-          background: $light-yellow;
-          cursor: pointer;
-          display: inline-block;
-          height: 10px;
-          margin-left: 0.5em;
-          width: 10px;
-        }
-
-        .bullet.current {
-          background: $base-pink;
-        }
-      }
     }
   }
 }
