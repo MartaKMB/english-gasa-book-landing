@@ -1,5 +1,4 @@
-// $(window).on('pageshow', function () {
-$(window).on('load', function () {
+$(function () {
   const $slide = $('.slide'),
     $slideGroup = $('.slide-group'),
     $bullet = $('.bullet');
