@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Review Section Component</title>
+    <!-- <script src="/js/slider.js"></script> -->
   </head>
   <body>
     <div
@@ -21,64 +22,78 @@
           alt="author is reading the book"
         />
       </div>
-      <ul class="book-reviews__prev-next-review prev-next-review">
-        <li class="prev-next-review__single-review single-review">
-            <i class="fa fa-quote-left fa-2x"></i>
-          <p class="single-review__quote">
-            Whether you’re an experienced dog owner or taking care of your first
-            pup, this is a must-read to foster a friendship with your pet. I
-            believe this book should be included in every breeder’s puppy pack
-            and given with every adopted dog.
-          </p>
-          <p class="single-review__quote-author">
-            Małgorzata Krzemińska
-          </p>
-          <a href="https://dogoterapiawlodzi.pl/" target="_blank">dogoterapiawlodzi.pl</a>
-        </li>
-        <!-- <li class="prev-next-review__single-review single-review">
-          <p>
-            A wonderful book on nonverbal ‘conversations’ with all animals. It
-            addresses the essential issues of intimacy, attentiveness, and focus
-            during pet massage. No matter your age or experience with manual
-            techniques, this book is for you. Communication, intimacy,
-            attentiveness—GaSa massage in three words.
-          </p>
-          <p>Agata Rekun-Gregorczyk</p>
-          <a href="">vitavet.eu</a>
-        </li>
-        <li class="prev-next-review__single-review single-review">
-          <p>
-            Unique, warm, calm, and nonintrusive. This book’s singularity and
-            timelessness shows, for one, in the fact that it was ‘slow’ before
-            the ‘slow life’ concept became trendy in Poland and that it followed
-            the ‘you don’t have to do anything’ approach before bookstores were
-            stocked with psychology books on mindfulness and letting go. The
-            author was ahead of her time, which makes her the embodiment of the
-            change and peace she writes about. She is consistent with the vision
-            she conveys. She is GaSa, and her authenticity is so powerful that
-            readers who are open to letting go will read this book not because
-            they have to, but because they will want to.
-          </p>
-          <p>Katarzyna Kucharska</p>
-          <a href="">futrzon.pl</a>
-        </li>
-        <li>
-          <p>
-            Every dog owner should read this book. For those seeking to deepen
-            their conversations through subtle touch, GaSa massage can teach you
-            how. You will learn techniques suitable for your dog and see how
-            many benefits come from a new form of calm activity that soothes the
-            emotions.
-          </p>
-          <p>Joanna Hajdyła-Jarosz</p>
-          <a href="">psiaedukacja.pl</a> -->
-        </li>
-      </ul>
-      <div class="book-reviews__arrows">
-        <i class="fa fa-long-arrow-left"></i>
-    <i class="fa fa-long-arrow-right"></i>
+      <div class="book-reviews__slide-wrap slide-wrap">
+        <div class="book-reviews__slide-mask slide-mask">
+          <ul class="book-reviews__slide-group slide-group">
+            <!-- <li class="slide">this</li>
+            <li class="slide">is</li>
+            <li class="slide">a</li>
+            <li class="slide">simple</li>
+            <li class="slide">slider</li> -->
+            <li class="slide-group__single-review single-review">
+              <i class="fa fa-quote-left fa-2x"></i>
+              <p class="single-review__quote">
+                Whether you’re an experienced dog owner or taking care of your
+                first pup, this is a must-read to foster a friendship with your
+                pet. I bediveve this book should be included in every breeder’s
+                puppy pack and given with every adopted dog.
+              </p>
+              <p class="single-review__quote-author">Małgorzata Krzemińska</p>
+              <a href="https://dogoterapiawlodzi.pl/" target="_blank"
+                >dogoterapiawlodzi.pl</a
+              >
+            </li>
+            <li class="slide-group__single-review single-review">
+              <i class="fa fa-quote-left fa-2x"></i>
+              <p class="single-review__quote">
+                A wonderful book on nonverbal ‘conversations’ with all animals.
+                It addresses the essential issues of intimacy, attentiveness,
+                and focus during pet massage. No matter your age or experience
+                with manual techniques, this book is for you. Communication,
+                intimacy, attentiveness—GaSa massage in three words.
+              </p>
+              <p class="single-review__quote-author">Agata Rekun-Gregorczyk</p>
+              <a href="" target="_blank">vitavet.eu</a>
+            </li>
+            <li class="slide-group__single-review single-review">
+              <i class="fa fa-quote-left fa-2x"></i>
+              <p class="single-review__quote">
+                Every dog owner should read this book. For those seeking to
+                deepen their conversations through subtle touch, GaSa massage
+                can teach you how. You will learn techniques suitable for your
+                dog and see how many benefits come from a new form of calm
+                activity that soothes the emotions.
+              </p>
+              <p class="single-review__quote-author">Joanna Hajdyła-Jarosz</p>
+              <a href="" target="_blank">psiaedukacja.pl</a>
+            </li>
+            <li class="slide-group__single-review single-review">
+              <i class="fa fa-quote-left fa-2x"></i>
+              <p class="single-review__quote">
+                Unique, warm, calm, and nonintrusive. This book’s singularity
+                and timelessness lie in the way it embraced ‘slow life’ and
+                mindfulness long before they became trendy in Poland. The author
+                was ahead of her time, embodying the change and peace she writes
+                about. She upholds the vision she portrays. She is GaSa, and her
+                authenticity is so powerful that readers who are open to letting
+                go will read this book not because they will have to, but
+                because they will want to.
+              </p>
+              <p class="single-review__quote-author">Katarzyna Kucharska</p>
+              <a href="" target="_blank">futrzon.pl</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="slide-wrap__slide-nav">
+          <ul>
+            <li class="bullet"></li>
+            <li class="bullet"></li>
+            <li class="bullet"></li>
+            <li class="bullet"></li>
+          </ul>
+        </div>
       </div>
-    
     </div>
   </body>
 </html>

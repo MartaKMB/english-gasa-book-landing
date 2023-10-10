@@ -1,8 +1,8 @@
 .book-reviews {
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  align-items: center;
   margin: 0 auto $title-margin-bottom;
   max-width: 1200px;
   min-height: 95vh;
@@ -10,11 +10,11 @@
   width: 100vw;
 
   &__title {
+    align-self: flex-end;
     font-size: $big-font-title-size;
     margin-bottom: $title-margin-bottom;
     text-transform: uppercase;
     width: 100%;
-    align-self: flex-end;
   }
 
   &__review-baner {
@@ -25,44 +25,39 @@
     }
   }
 
-  &__prev-next-review {
+  &__slide-wrap {
     width: 100%;
-    background-color: $light-yellow;
+  }
+
+  &__slide-mask {
     border-radius: $base-border-radius;
-    min-height: 300px;
+    height: fit-content;
+    min-height: 90vh;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__slide-group {
+    align-items: flex-start;
+    background-color: $light-yellow;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: flex-start;
+    left: 0;
+    position: absolute;
+    top: 0px;
+    width: 100%;
   }
 
-  @media (min-width: 1200px) {
-    .review-baner {
-      width: 100%;
-      max-width: 600px;
-      max-height: 500px;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      background-color: $base-pink;
-      border-radius: $base-border-radius;
-      overflow: hidden;
-    }
-
-    .prev-next-review {
-      z-index: 2;
-      translate: -20%;
-      max-width: 500px;
-    }
-  }
-
-  .prev-next-review {
+  .slide-group {
     &__single-review {
-      list-style-type: none;
+      align-items: flex-start;
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
-      align-items: flex-start;
+      height: fit-content;
+      justify-content: space-around;
+      list-style-type: none;
+      min-height: 90vh;
       padding: $base-side-padding;
     }
 
@@ -73,8 +68,9 @@
       }
 
       &__quote {
-        font-size: $small-font-title-size;
+        font-size: 1.15rem;
         margin-bottom: $subtitle-margin-bottom;
+        margin-top: auto;
       }
 
       &__quote-author {
@@ -83,21 +79,69 @@
     }
   }
 
-  &__arrows {
-    width: 100%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-
-    .fa-long-arrow-left {
-      margin-right: 0.75rem;
-      cursor: pointer;
+  @media (min-width: 480px) {
+    .slide-mask {
+      height: fit-content;
+      min-height: 60vh;
     }
 
-    .fa-long-arrow-right {
-      margin-left: 0.75rem;
-      cursor: pointer;
+    .single-review {
+      height: fit-content;
+      min-height: 60vh;
+    }
+  }
+
+  @media (min-width: 760px) {
+    .slide-mask {
+      height: fit-content;
+      min-height: 50vh;
+    }
+
+    .single-review {
+      height: fit-content;
+      min-height: 50vh;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .review-baner {
+      align-items: center;
+      background-color: $base-pink;
+      border-radius: $base-border-radius;
+      display: flex;
+      justify-content: flex-start;
+      max-height: 500px;
+      max-width: 600px;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .slide-wrap {
+      max-width: 500px;
+      translate: -20%;
+      z-index: 2;
+
+      &__slide-nav {
+        text-align: center;
+
+        ul {
+          margin: 0;
+          padding: 0;
+        }
+
+        .bullet {
+          background: $light-yellow;
+          cursor: pointer;
+          display: inline-block;
+          height: 10px;
+          margin-left: 0.5em;
+          width: 10px;
+        }
+
+        .bullet.current {
+          background: $base-pink;
+        }
+      }
     }
   }
 }

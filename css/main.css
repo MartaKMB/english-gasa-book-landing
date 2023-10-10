@@ -567,10 +567,10 @@
 }
 
 .book-reviews {
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  align-items: center;
   margin: 0 auto 40px;
   max-width: 1200px;
   min-height: 95vh;
@@ -578,11 +578,11 @@
   width: 100vw;
 }
 .book-reviews__title {
+  align-self: flex-end;
   font-size: 2rem;
   margin-bottom: 40px;
   text-transform: uppercase;
   width: 100%;
-  align-self: flex-end;
 }
 .book-reviews__review-baner {
   display: none;
@@ -590,65 +590,108 @@
 .book-reviews__review-baner img {
   width: 75%;
 }
-.book-reviews__prev-next-review {
+.book-reviews__slide-wrap {
   width: 100%;
-  background-color: #fcf1da;
+}
+.book-reviews__slide-mask {
   border-radius: 15px;
-  min-height: 300px;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 90vh;
+  overflow: hidden;
+  position: relative;
+}
+.book-reviews__slide-group {
+  align-items: flex-start;
+  background-color: #fcf1da;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  left: 0;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+.book-reviews .slide-group__single-review {
   align-items: flex-start;
-}
-@media (min-width: 1200px) {
-  .book-reviews .review-baner {
-    width: 100%;
-    max-width: 600px;
-    max-height: 500px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: #f8afb2;
-    border-radius: 15px;
-    overflow: hidden;
-  }
-  .book-reviews .prev-next-review {
-    z-index: 2;
-    translate: -20%;
-    max-width: 500px;
-  }
-}
-.book-reviews .prev-next-review__single-review {
+  display: flex;
+  flex-direction: column;
+  height: -moz-fit-content;
+  height: fit-content;
+  justify-content: space-around;
   list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
+  min-height: 90vh;
   padding: 1.75rem;
 }
-.book-reviews .prev-next-review .single-review .fa-quote-left {
+.book-reviews .slide-group .single-review .fa-quote-left {
   color: #f8afb2;
   margin-bottom: 20px;
 }
-.book-reviews .prev-next-review .single-review__quote {
-  font-size: 1.25rem;
+.book-reviews .slide-group .single-review__quote {
+  font-size: 1.15rem;
   margin-bottom: 20px;
+  margin-top: auto;
 }
-.book-reviews .prev-next-review .single-review__quote-author {
+.book-reviews .slide-group .single-review__quote-author {
   font-weight: 600;
 }
-.book-reviews__arrows {
-  width: 100%;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+@media (min-width: 480px) {
+  .book-reviews .slide-mask {
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 60vh;
+  }
+  .book-reviews .single-review {
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 60vh;
+  }
 }
-.book-reviews__arrows .fa-long-arrow-left {
-  margin-right: 0.75rem;
-  cursor: pointer;
+@media (min-width: 760px) {
+  .book-reviews .slide-mask {
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 50vh;
+  }
+  .book-reviews .single-review {
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 50vh;
+  }
 }
-.book-reviews__arrows .fa-long-arrow-right {
-  margin-left: 0.75rem;
-  cursor: pointer;
+@media (min-width: 1200px) {
+  .book-reviews .review-baner {
+    align-items: center;
+    background-color: #f8afb2;
+    border-radius: 15px;
+    display: flex;
+    justify-content: flex-start;
+    max-height: 500px;
+    max-width: 600px;
+    overflow: hidden;
+    width: 100%;
+  }
+  .book-reviews .slide-wrap {
+    max-width: 500px;
+    translate: -20%;
+    z-index: 2;
+  }
+  .book-reviews .slide-wrap__slide-nav {
+    text-align: center;
+  }
+  .book-reviews .slide-wrap__slide-nav ul {
+    margin: 0;
+    padding: 0;
+  }
+  .book-reviews .slide-wrap__slide-nav .bullet {
+    background: #fcf1da;
+    cursor: pointer;
+    display: inline-block;
+    height: 10px;
+    margin-left: 0.5em;
+    width: 10px;
+  }
+  .book-reviews .slide-wrap__slide-nav .bullet.current {
+    background: #f8afb2;
+  }
 }/*# sourceMappingURL=main.css.map */
