@@ -268,7 +268,7 @@
   text-transform: uppercase;
 }
 
-.author-section {
+.about-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -278,7 +278,7 @@
   position: relative;
   width: 100vw;
 }
-.author-section__left-side-description {
+.about-section__left-side-description {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
@@ -290,7 +290,7 @@
   width: 100%;
   padding-left: 1.75rem;
 }
-.author-section__right-side-image {
+.about-section__right-side-image {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -303,7 +303,7 @@
   min-height: 380px;
   text-align: center;
 }
-.author-section__right-side-image::before {
+.about-section__right-side-image::before {
   background-color: #63b76a;
   border: 20px solid #f0af02;
   bottom: 0;
@@ -318,7 +318,7 @@
   border-right: none;
   left: calc(50% - 190px);
 }
-.author-section__right-side-image::after {
+.about-section__right-side-image::after {
   background-color: #f0af02;
   border: 20px solid #63b76a;
   bottom: 0;
@@ -333,33 +333,33 @@
   border-radius: 0 190px 190px 0;
   right: calc(50% - 190px);
 }
-.author-section .left-side-description__title {
+.about-section .left-side-description__title {
   font-size: 2rem;
   margin-bottom: 40px;
   text-transform: uppercase;
   z-index: 2;
 }
-.author-section .left-side-description__subtitle {
+.about-section .left-side-description__subtitle {
   font-size: 1.5rem;
   margin-bottom: 20px;
   text-transform: uppercase;
   z-index: 2;
 }
-.author-section .left-side-description__txt-about {
+.about-section .left-side-description__txt-about {
   font-size: 1.15rem;
   margin-bottom: 20px;
   margin-bottom: 20px;
 }
-.author-section .left-side-description__txt-about p {
+.about-section .left-side-description__txt-about p {
   margin-bottom: 0.5rem;
 }
-.author-section .left-side-description__hello {
+.about-section .left-side-description__hello {
   color: #f0af02;
   font-family: "Sedgwick Ave", cursive;
   font-size: 2.25rem;
   margin-bottom: 20px;
 }
-.author-section .left-side-description__btn-author {
+.about-section .left-side-description__btn-author {
   background-color: #f0af02;
   border-radius: 15px;
   border: 1px solid #2b2b2b;
@@ -370,18 +370,18 @@
   padding: 0.5rem;
   width: 200px;
 }
-.author-section .left-side-description__btn-author:hover {
+.about-section .left-side-description__btn-author:hover {
   background-color: #2b2b2b;
   border-color: #f0af02;
   color: #f0af02;
 }
-.author-section .left-side-description__social-media-links {
+.about-section .left-side-description__social-media-links {
   align-items: center;
   display: flex;
   justify-content: flex-start;
   margin-bottom: 40px;
 }
-.author-section .left-side-description__social-media-links li {
+.about-section .left-side-description__social-media-links li {
   align-items: center;
   background-color: #fcf1da;
   border-radius: 50%;
@@ -393,16 +393,88 @@
   margin-right: 4rem;
   width: 60px;
 }
-.author-section .left-side-description__social-media-links li i {
+.about-section .left-side-description__social-media-links li i {
   color: #2b2b2b;
 }
-.author-section .right-side-image__image {
+.about-section .right-side-image__image {
   height: -moz-fit-content;
   height: fit-content;
   min-width: 350px;
   position: relative;
   width: 75%;
   z-index: 2;
+}
+.about-section--short {
+  min-height: 60vh;
+}
+.about-section--short .left-side-description,
+.about-section--short .right-side-image {
+  min-height: 420px;
+}
+.about-section--reverse {
+  flex-direction: row-reverse;
+}
+
+.baner-section {
+  margin: 0 auto 40px;
+  max-width: 1200px;
+  min-height: 95vh;
+  padding: 40px 1.75rem 10rem 1.75rem;
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #fcf1da;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.baner-section__title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  width: 100%;
+  z-index: 2;
+}
+.baner-section__baner-description {
+  font-size: 1.15rem;
+  margin-bottom: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  z-index: 2;
+}
+.baner-section__baner-description p {
+  margin-bottom: 0.5rem;
+}
+.baner-section__image-bckg {
+  display: none;
+}
+.baner-section__title-on-bckg {
+  font-size: 20rem;
+  position: absolute;
+  bottom: -15%;
+  left: 1.75rem;
+  color: #fcf1da;
+  opacity: 0.5;
+  text-shadow: -15px 0 #f0af02, 0 15px #f0af02, 15px 0 #f0af02, 0 -15px #f0af02;
+}
+@media (min-width: 1200px) {
+  .baner-section .baner-description {
+    max-width: 450px;
+  }
+  .baner-section .image-bckg {
+    display: block;
+    width: 400px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: rotate(-30deg);
+  }
+  .baner-section .image-bckg__image {
+    width: 100%;
+    box-shadow: 0px 8px 25px -5px rgb(66, 68, 90);
+    opacity: 0.75;
+  }
 }
 
 .books-list-section {

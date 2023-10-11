@@ -1,0 +1,160 @@
+@mixin about-with-image-section($align-position, $justify-position) {
+  align-items: $align-position;
+  display: flex;
+  flex-direction: column;
+  justify-content: $justify-position;
+  max-width: 600px;
+  min-height: 80vh;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+$circle-height: 380px;
+$circle-width: 190px;
+
+@mixin about-section-circle($bckg-color, $border-color) {
+  background-color: $bckg-color;
+  border: 20px solid $border-color;
+  bottom: 0;
+  box-sizing: border-box;
+  content: '';
+  display: block;
+  height: $circle-height;
+  position: absolute;
+  width: $circle-width;
+  z-index: -1;
+}
+
+@mixin about-section-title($size, $margin) {
+  font-size: $size;
+  margin-bottom: $margin;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: $title-margin-bottom;
+  min-height: 95vh;
+  padding-top: $title-margin-bottom;
+  position: relative;
+  width: 100vw;
+
+  &__left-side-description {
+    @include about-with-image-section(flex-start, flex-end);
+
+    padding-left: $base-side-padding;
+  }
+
+  &__right-side-image {
+    @include about-with-image-section(center, flex-end);
+
+    min-height: $circle-height;
+    text-align: center;
+
+    &::before {
+      @include about-section-circle($base-green, $base-yellow);
+
+      border-radius: $circle-width 0 0 $circle-width;
+      border-right: none;
+      left: calc(50% - $circle-width);
+    }
+
+    &::after {
+      @include about-section-circle($base-yellow, $base-green);
+
+      border-left: none;
+      border-radius: 0 $circle-width $circle-width 0;
+      right: calc(50% - $circle-width);
+    }
+  }
+
+  .left-side-description {
+    &__title {
+      @include about-section-title($big-font-title-size, $title-margin-bottom);
+    }
+
+    &__subtitle {
+      @include about-section-title(
+        $medium-font-title-size,
+        $subtitle-margin-bottom
+      );
+    }
+
+    &__txt-about {
+      font-size: 1.15rem;
+      margin-bottom: $subtitle-margin-bottom;
+      margin-bottom: 20px;
+
+      p {
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    &__hello {
+      color: $base-yellow;
+      font-family: $handwrite-font-family;
+      font-size: $large-font-title-size;
+      margin-bottom: $subtitle-margin-bottom;
+    }
+
+    &__btn-author {
+      @include gasa-small-frame-button(
+        $base-yellow,
+        $base-black-font,
+        1.2rem,
+        200px
+      );
+    }
+
+    &__social-media-links {
+      align-items: center;
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: $title-margin-bottom;
+
+      li {
+        align-items: center;
+        background-color: $light-yellow;
+        border-radius: 50%;
+        box-shadow: $base-box-shadow;
+        display: flex;
+        height: 60px;
+        justify-content: center;
+        list-style-type: none;
+        margin-right: 4rem;
+        width: 60px;
+
+        i {
+          color: $base-black-font;
+        }
+      }
+    }
+  }
+
+  .right-side-image {
+    &__image {
+      height: fit-content;
+      min-width: 350px;
+      position: relative;
+      width: 75%;
+      z-index: 2;
+    }
+  }
+
+  &--short {
+    min-height: 60vh;
+
+    .left-side-description,
+    .right-side-image {
+      min-height: 420px;
+    }
+  }
+
+  &--reverse {
+    flex-direction: row-reverse;
+  }
+}

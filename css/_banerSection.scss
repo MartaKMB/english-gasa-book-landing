@@ -1,0 +1,70 @@
+.baner-section {
+  margin: 0 auto $title-margin-bottom;
+  max-width: 1200px;
+  min-height: 95vh;
+  padding: $title-margin-bottom $base-side-padding 10rem $base-side-padding;
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+  background-color: $light-yellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  &__title {
+    font-size: $big-font-title-size;
+    margin-bottom: $title-margin-bottom;
+    text-transform: uppercase;
+    width: 100%;
+    z-index: 2;
+  }
+
+  &__baner-description {
+    font-size: 1.15rem;
+    margin-bottom: $subtitle-margin-bottom;
+    margin-bottom: 20px;
+    width: 100%;
+    z-index: 2;
+
+    p {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__image-bckg {
+    display: none;
+  }
+
+  &__title-on-bckg {
+    font-size: 20rem;
+    position: absolute;
+    bottom: -15%;
+    left: $base-side-padding;
+    color: $light-yellow;
+    opacity: 0.5;
+    text-shadow: -15px 0 $base-yellow, 0 15px $base-yellow, 15px 0 $base-yellow,
+      0 -15px $base-yellow;
+  }
+
+  @media (min-width: 1200px) {
+    .baner-description {
+      max-width: 450px;
+    }
+
+    .image-bckg {
+      display: block;
+      width: 400px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: rotate(-30deg);
+
+      &__image {
+        width: 100%;
+        box-shadow: $base-box-shadow;
+        opacity: 0.75;
+      }
+    }
+  }
+}
