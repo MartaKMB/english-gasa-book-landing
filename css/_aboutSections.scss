@@ -86,7 +86,6 @@ $circle-width: 190px;
 
     &__txt-about {
       font-size: 1.15rem;
-      margin-bottom: $subtitle-margin-bottom;
       margin-bottom: 20px;
 
       p {
@@ -156,5 +155,9 @@ $circle-width: 190px;
 
   &--reverse {
     flex-direction: row-reverse;
+
+    .left-side-description {
+      padding: 0 $base-side-padding;
+    }
   }
 }

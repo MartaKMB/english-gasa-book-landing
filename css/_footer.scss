@@ -1,0 +1,36 @@
+.gasabook-footer {
+  background-color: $base-light-blue;
+  border-bottom-left-radius: $base-border-radius;
+  border-bottom-right-radius: $base-border-radius;
+  margin: 0 auto;
+  max-width: 1200px;
+  overflow: hidden;
+  width: 100%;
+
+  &__social-media-links {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    padding: $base-side-padding;
+
+    li {
+      list-style: none;
+    }
+
+    i {
+      color: $light-baige;
+    }
+  }
+
+  &__copyrights {
+    background-color: $base-black-font;
+    padding: $base-side-padding;
+    text-align: center;
+
+    p {
+      color: $light-baige;
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+}

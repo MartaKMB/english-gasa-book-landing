@@ -1,0 +1,16 @@
+.aside-for-amazon-button {
+  margin: 0 auto;
+  max-width: 1200px;
+  text-align: center;
+  width: 100%;
+
+  &__buy-btn {
+    @include gasa-button(
+      $base-black-font,
+      $base-baige,
+      $medium-font-title-size,
+      85%
+    );
+    max-width: 400px;
+  }
+}

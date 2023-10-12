@@ -25,4 +25,8 @@ $(function () {
     '/html/reviewSection.html #review-component',
     addScriptForComponent('/js/slider.js')
   );
+  $('#for-relaxed-dogs-gallery-section').load(
+    '/html/gallerySection.html #gallery-component'
+  );
+  $('#for-footer').load('/html/footer.html #footer-component');
 });

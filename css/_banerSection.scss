@@ -1,16 +1,16 @@
 .baner-section {
-  margin: 0 auto $title-margin-bottom;
-  max-width: 1200px;
-  min-height: 95vh;
-  padding: $title-margin-bottom $base-side-padding 10rem $base-side-padding;
-  position: relative;
-  width: 100vw;
-  overflow: hidden;
+  align-items: flex-start;
   background-color: $light-yellow;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
+  justify-content: center;
+  margin: 0 auto $title-margin-bottom;
+  max-width: 1200px;
+  min-height: 95vh;
+  overflow: hidden;
+  padding: $base-side-padding;
+  position: relative;
+  width: 100vw;
 
   &__title {
     font-size: $big-font-title-size;
@@ -32,17 +32,27 @@
     }
   }
 
+  &__baner-btn {
+    @include gasa-button(
+      $base-black-font,
+      $base-baige,
+      $small-font-title-size,
+      65%
+    );
+    margin-top: 2rem;
+  }
+
   &__image-bckg {
     display: none;
   }
 
   &__title-on-bckg {
-    font-size: 20rem;
-    position: absolute;
     bottom: -15%;
-    left: $base-side-padding;
     color: $light-yellow;
-    opacity: 0.5;
+    font-size: 20rem;
+    left: $base-side-padding;
+    opacity: 0.35;
+    position: absolute;
     text-shadow: -15px 0 $base-yellow, 0 15px $base-yellow, 15px 0 $base-yellow,
       0 -15px $base-yellow;
   }
@@ -54,17 +64,23 @@
 
     .image-bckg {
       display: block;
-      width: 400px;
       position: absolute;
-      top: 0;
       right: 0;
+      top: 0;
       transform: rotate(-30deg);
+      width: 400px;
 
       &__image {
-        width: 100%;
         box-shadow: $base-box-shadow;
         opacity: 0.75;
+        width: 100%;
       }
     }
+  }
+}
+
+@media (min-width: 1200px) {
+  .baner-section {
+    justify-content: flex-end;
   }
 }

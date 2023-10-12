@@ -1,0 +1,61 @@
+.gallery-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 0 auto $title-margin-bottom;
+  max-width: 1200px;
+  min-height: 95vh;
+  padding: $title-margin-bottom $base-side-padding $title-margin-bottom;
+  position: relative;
+  width: 100vw;
+
+  &__title {
+    font-size: $medium-font-title-size;
+    margin-bottom: $subtitle-margin-bottom;
+    text-transform: uppercase;
+    z-index: 2;
+  }
+
+  &__gallery-description {
+    margin-bottom: $subtitle-margin-bottom;
+
+    p {
+      font-size: 1.15rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .important-paragraph {
+      font-weight: 600;
+    }
+  }
+
+  &__relaxed-dogs-images {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: $subtitle-margin-bottom;
+    width: 100%;
+  }
+
+  .relaxed-dogs-images {
+    &__single-image {
+      align-items: center;
+      background-color: white;
+      border-radius: $base-border-radius;
+      box-shadow: $base-box-shadow;
+      display: flex;
+      height: 350px;
+      justify-content: center;
+      list-style-type: none;
+      margin-bottom: $base-side-padding;
+      max-width: 350px;
+      width: 100%;
+
+      img {
+        max-width: 325px;
+        width: 90%;
+      }
+    }
+  }
+}
