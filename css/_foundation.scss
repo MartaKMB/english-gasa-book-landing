@@ -65,11 +65,14 @@ $title-margin-bottom: 40px;
   box-shadow: $base-box-shadow;
   color: $font-color;
   cursor: pointer;
+  display: block;
   font-size: $font-size;
   letter-spacing: 0.15rem;
   line-height: 1.3;
   margin: 1rem 0;
   padding: 1em;
+  text-align: center;
+  text-decoration: none;
   text-transform: uppercase;
   width: $btn-width;
 
@@ -98,9 +101,12 @@ $title-margin-bottom: 40px;
   border: 1px solid $font-color;
   color: $font-color;
   cursor: pointer;
+  display: block;
   font-size: $font-size;
   margin: 0.65rem 0;
   padding: 0.5rem;
+  text-align: center;
+  text-decoration: none;
   width: $btn-width;
 
   &:hover {

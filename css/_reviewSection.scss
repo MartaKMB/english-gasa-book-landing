@@ -58,7 +58,7 @@
   &__slide-mask {
     border-radius: $base-border-radius;
     height: fit-content;
-    min-height: 90vh;
+    min-height: 85vh;
     overflow: hidden;
     position: relative;
   }
@@ -107,7 +107,7 @@
       height: fit-content;
       justify-content: space-around;
       list-style-type: none;
-      min-height: 90vh;
+      min-height: 85vh;
       padding: $base-side-padding;
     }
 
@@ -120,7 +120,6 @@
       &__quote {
         font-size: 1.15rem;
         margin-bottom: $subtitle-margin-bottom;
-        margin-top: auto;
       }
 
       &__quote-author {
