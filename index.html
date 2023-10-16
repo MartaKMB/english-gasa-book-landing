@@ -3,32 +3,603 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Book about relaxing dog massage</title>
+    <title>Dog massage - unique book on Amazon</title>
+    <link rel="icon" type="image/png" href="./images/yellow-paw.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="css/main.css" />
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-    <script src="js/componentsLoader.js"></script>
+    <script src="./js/slider.js"></script>
   </head>
   <body>
-    <header id="for-header"></header>
+    <header id="for-header">
+      <div class="gasabook-header" id="header-component">
+        <section class="gasabook-header__left-side-header left-side-header">
+          <h2 class="left-side-header__subtitle">Talking Through Touch</h2>
+          <h1 class="left-side-header__title">
+            GaSa - Relaxation Massage for Dogs
+          </h1>
+          <a
+            class="left-side-header__button left-side-header__button--with-pulse"
+            href=""
+            target="_blank"
+          >
+            Buy on Amazon
+          </a>
+        </section>
+        <section class="gasabook-header__right-side-header right-side-header">
+          <ul
+            class="right-side-header__books-vertical-list books-vertical-list"
+          >
+            <li
+              class="books-vertical-list__single-book-element single-book-element"
+            >
+              <img
+                src="./images/cover-eng-dog.png"
+                alt="english book cover - massage for dogs"
+                class="single-book-element__book-cover"
+              />
+              <p class="single-book-element__book-title">
+                GaSa - Relaxation Massage for Dogs
+              </p>
+              <p class="single-book-element__book-price">$20.00</p>
+              <a
+                href=""
+                target="_blank"
+                class="single-book-element__frame-btn--amazon-btn"
+              >
+                Buy on Amazon
+              </a>
+            </li>
+            <li
+              class="books-vertical-list__single-book-element single-book-element"
+            >
+              <img
+                src="./images/gasa-books-polish.png"
+                alt="polish book cover - massage for dogs and cats"
+                class="single-book-element__book-cover single-book-element__book-cover--polish"
+              />
+              <p class="single-book-element__book-title">
+                GaSa - masaz relaksacyjny
+              </p>
+              <p class="single-book-element__book-price">polish version</p>
+              <a
+                href="https://martamucha.pl/kategoria-produktu/ksiazki/"
+                target="_blank"
+                class="single-book-element__frame-btn"
+              >
+                Buy in online shop
+              </a>
+            </li>
+          </ul>
+        </section>
+        <ul
+          class="gasabook-header__bottom-side-list-header bottom-side-list-header"
+        >
+          <li class="bottom-side-list-header__single-element single-element">
+            <img
+              src="./images/paw.png"
+              alt="paw"
+              class="single-element__image"
+            />
+            <p class="single-element__important-word">closeness</p>
+          </li>
+          <li class="bottom-side-list-header__single-element single-element">
+            <img
+              src="./images/paw.png"
+              alt="paw"
+              class="single-element__image"
+            />
+            <p class="single-element__important-word">mindfulness</p>
+          </li>
+          <li class="bottom-side-list-header__single-element single-element">
+            <img
+              src="./images/paw.png"
+              alt="paw"
+              class="single-element__image"
+            />
+            <p class="single-element__important-word">communication</p>
+          </li>
+        </ul>
+      </div>
+    </header>
     <main class="gasabook-main-container">
-      <section id="for-about-gasa-section"></section>
-      <section id="for-book-baner-section"></section>
-      <section id="for-book-inside-section"></section>
+      <section id="for-about-gasa-section">
+        <div
+          class="gasabook-main-container__about-section about-section about-section--short about-section--reverse"
+          id="about-gasa-component"
+        >
+          <div
+            class="about-section__left-side-description left-side-description"
+          >
+            <h2 class="left-side-description__title">WHAT IS GaSa MASSAGE?</h2>
+            <div class="left-side-description__txt-about">
+              <p>
+                It is an animal relaxation massage that helps you learn what
+                kind of contact your pet enjoys.
+              </p>
+              <p>
+                It is an ongoing dialog, a time to practice attentiveness and
+                openness to the dog.
+              </p>
+              <p>
+                GaSa is also a way of caring for yourself and your state of
+                mind, a way to be HERE and NOW.
+              </p>
+            </div>
+          </div>
+          <div class="about-section__right-side-image right-side-image">
+            <img
+              src="./images/about-gasa.png"
+              alt="dog during gasa massage"
+              class="right-side-image__image"
+            />
+          </div>
+        </div>
+      </section>
+      <section id="for-book-baner-section">
+        <div
+          class="gasabook-main-container__baner-section baner-section"
+          id="book-baner-component"
+        >
+          <h2 class="baner-section__title">
+            BOOKS ON ANIMAL RELAXATION MASSAGE
+          </h2>
+          <div class="baner-section__baner-description baner-description">
+            <p>
+              GaSa books are not veterinary or animal physiotherapy textbooks –
+              they present a unique approach to animal relaxation massage. The
+              fundamental concept behind this technique is adapting actions to
+              fit the specific needs of each pet.
+            </p>
+            <p>
+              The book offers tips and inspiration for creating a relaxing
+              ritual that suits you and your dog best.
+            </p>
+            <a href="" target="_blank" class="baner-section__baner-btn"
+              >Buy on Amazon</a
+            >
+          </div>
+          <div class="baner-section__image-bckg image-bckg">
+            <img
+              src="./images/cover-eng-dog.png"
+              alt="book about gasa massage cover"
+              class="image-bckg__image"
+            />
+          </div>
+          <h3 class="baner-section__title-on-bckg">GaSa</h3>
+        </div>
+      </section>
+      <section id="for-book-inside-section">
+        <div
+          class="gasabook-main-container__book-inside-section book-inside-section"
+          id="book-inside-component"
+        >
+          <h3 class="book-inside-section__title">What's in the book?</h3>
+          <ul class="book-inside-section__inside-list inside-list">
+            <li class="inside-list__single-element single-element">
+              <div class="single-element__paw-image">
+                <img src="./images/yellow-paw.png" alt="yellow paw print" />
+              </div>
+              <h4 class="single-element__inside-title">PHILOSOPHY</h4>
+              <p class="single-element__inside-description">
+                The books answer such questions as:
+              </p>
+              <ul class="single-element__inside-description">
+                <li>Why are there no ‘external masseurs’ in GaSa?</li>
+                <li>Is GaSa possible without touching?</li>
+                <li>How can a cuddly toy come in handy?</li>
+              </ul>
+            </li>
+            <li class="inside-list__single-element single-element">
+              <div class="single-element__paw-image">
+                <img src="./images/yellow-paw.png" alt="yellow paw print" />
+              </div>
+              <h4 class="single-element__inside-title">COMMUNICATION</h4>
+              <p class="single-element__inside-description">
+                GaSa massage is talking through touch with those it is difficult
+                to communicate with through words.
+              </p>
+              <p class="single-element__inside-description">
+                The book shows you how to observe your pet to recognize and
+                understand the cues they send.
+              </p>
+            </li>
+            <li class="inside-list__single-element single-element">
+              <div class="single-element__paw-image">
+                <img src="./images/yellow-paw.png" alt="yellow paw print" />
+              </div>
+              <h4 class="single-element__inside-title">TECHNIQUES</h4>
+              <p class="single-element__inside-description">
+                You learn the ways to stroke your pet. For educational purposes,
+                they are categorized and organized—but this is not the only
+                valid way to perform them. The book explains that as well.
+              </p>
+              <h5>IMAGES AND INSTRUCTIONAL GRAPHICS</h5>
+              <p class="single-element__inside-description">
+                Photos and drawings help you put the techniques into practice.
+              </p>
+            </li>
+            <li class="inside-list__single-element single-element">
+              <div class="single-element__paw-image">
+                <img src="./images/yellow-paw.png" alt="yellow paw print" />
+              </div>
+              <h4 class="single-element__inside-title">EXPERT COMMENTS</h4>
+              <p class="single-element__inside-description">
+                The books are consulted and annotated by a canine therapist,
+                animal physiotherapist and osteopath, animal trainers and
+                behaviorists.
+              </p>
+            </li>
+            <li class="inside-list__single-element single-element">
+              <div class="single-element__paw-image">
+                <img src="./images/yellow-paw.png" alt="yellow paw print" />
+              </div>
+              <h4 class="single-element__inside-title">
+                INDICATIONS / CONTRAINDICATIONS
+              </h4>
+              <p class="single-element__inside-description">
+                You learn the standard indications and . . .
+              </p>
+              <p class="single-element__inside-description">
+                one KEY contraindication.
+              </p>
+            </li>
+            <li class="inside-list__single-element single-element">
+              <div class="single-element__paw-image">
+                <img src="./images/yellow-paw.png" alt="yellow paw print" />
+              </div>
+              <h4 class="single-element__inside-title">
+                COMPLEMENTARY EXERCISES
+              </h4>
+              <p class="single-element__inside-description">
+                Not all techniques are touch-related and some are performed
+                without a dog, with a notebook needed here and there.
+              </p>
+              <p class="single-element__inside-description">
+                All this so you can FEEL more and BE more when you meet with
+                your pet.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
       <aside class="aside-for-amazon-button">
-        <button class="aside-for-amazon-button__buy-btn">Buy on Amazon</button>
+        <a href="" target="_blank" class="aside-for-amazon-button__buy-btn"
+          >Buy on Amazon</a
+        >
       </aside>
-      <section id="for-about-author-section"></section>
-      <section id="for-all-books-section"></section>
-      <section id="for-review-section"></section>
+      <section id="for-about-author-section">
+        <div
+          class="gasabook-main-container__about-section about-section"
+          id="about-author-component"
+        >
+          <div
+            class="about-section__left-side-description left-side-description"
+          >
+            <h4 class="left-side-description__subtitle">About author</h4>
+            <h2 class="left-side-description__title">Marta Mucha-Balcerek</h2>
+            <div class="left-side-description__txt-about">
+              <h5 class="left-side-description__hello">Hello!</h5>
+              <p>I am Marta Mucha-Balcerek, the creator of GaSa.</p>
+              <p>
+                Since 2012, I have been holding the animal relaxation massage
+                workshops. In 2015, I published the first book on this subject.
+              </p>
+              <p>
+                Building a calm and mindful relationship with pets is something
+                that fascinates me – touch is just one element that can
+                contribute to this.
+              </p>
+              <a
+                href=""
+                target="_blank"
+                class="left-side-description__btn-author"
+              >
+                Marta on Amazon
+              </a>
+            </div>
+            <ul class="left-side-description__social-media-links">
+              <li>
+                <a
+                  href="https://www.instagram.com/gasa_martamb/"
+                  target="_blank"
+                >
+                  <i class="fa fa-instagram fa-2x"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/gasa.martamucha"
+                  target="_blank"
+                  ><i class="fa fa-facebook-square fa-2x"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/gasa-marta-mucha-balcerek"
+                  target="_blank"
+                  ><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <div class="about-section__right-side-image right-side-image">
+            <img
+              src="./images/author-mmb.PNG"
+              alt="book author"
+              class="right-side-image__image"
+            />
+          </div>
+        </div>
+      </section>
+      <section id="for-all-books-section">
+        <div
+          class="gasabook-main-container__books-list-section books-list-section"
+          id="all-books-component"
+        >
+          <h4 class="books-list-section__title">All books about GaSa</h4>
+          <ul
+            class="books-list-section__books-horizontal-list books-horizontal-list"
+          >
+            <li
+              class="books-horizontal-list__single-book-element single-book-element"
+            >
+              <img
+                src="./images/cover-eng-dog.png"
+                alt="english book cover - massage for dogs"
+                class="single-book-element__book-cover single-book-element__book-cover--english-cover"
+              />
+              <p class="single-book-element__book-title">
+                GaSa - Relaxation Massage for Dogs
+              </p>
+              <p class="single-book-element__book-price">$20.00</p>
+              <a
+                href=""
+                target="_blank"
+                class="single-book-element__frame-btn--amazon-btn"
+              >
+                Buy on Amazon
+              </a>
+            </li>
+            <li
+              class="books-horizontal-list__single-book-element single-book-element"
+            >
+              <img
+                src="./images/cover-pl-dog.png"
+                alt="polish book cover - massage for dogs"
+                class="single-book-element__book-cover"
+              />
+              <p class="single-book-element__book-title">
+                GaSa - masaz relaksacyjny psów
+              </p>
+              <p class="single-book-element__book-price">75.00 PLN</p>
+              <a
+                href="https://martamucha.pl/produkt/ksiazka-gasa-masaz-psow-wyd2/"
+                target="_blank"
+                class="single-book-element__frame-btn"
+              >
+                Buy in PL online shop
+              </a>
+            </li>
+            <li
+              class="books-horizontal-list__single-book-element single-book-element"
+            >
+              <img
+                src="./images/cover-pl-cat.png"
+                alt="polish book cover - massage for cats"
+                class="single-book-element__book-cover"
+              />
+              <p class="single-book-element__book-title">
+                GaSa - masaz relaksacyjny kotów
+              </p>
+              <p class="single-book-element__book-price">55.00 PLN</p>
+              <a
+                href="https://martamucha.pl/produkt/ksiazka-gasa-masaz-kotow/"
+                target="_blank"
+                class="single-book-element__frame-btn"
+              >
+                Buy in PL online shop
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="for-review-section">
+        <div
+          class="gasabook-main-container__book-reviews book-reviews"
+          id="review-component"
+        >
+          <h3 class="book-reviews__title">Book reviews</h3>
+          <div class="book-reviews__reviews-description reviews-description">
+            <p class="reviews-description__text">
+              The books are consulted and annotated by a canine therapist,
+              animal physiotherapist and osteopath, animal trainers and
+              behaviorists.
+            </p>
+            <a
+              href=""
+              target="_blank"
+              class="reviews-description__feedback-amazon-btn"
+            >
+              See feedback on Amazon
+            </a>
+          </div>
+          <div class="book-reviews__review-baner review-baner">
+            <img
+              src="./images/for-book-review-image.png"
+              alt="author is reading the book"
+            />
+          </div>
+          <div class="book-reviews__slide-wrap slide-wrap">
+            <div class="book-reviews__slide-mask slide-mask">
+              <ul class="book-reviews__slide-group slide-group">
+                <li class="slide-group__single-review single-review slide">
+                  <i class="fa fa-quote-left fa-2x"></i>
+                  <p class="single-review__quote">
+                    Whether you’re an experienced dog owner or taking care of
+                    your first pup, this is a must-read to foster a friendship
+                    with your pet. I bediveve this book should be included in
+                    every breeder’s puppy pack and given with every adopted dog.
+                  </p>
+                  <div>
+                    <p class="single-review__quote-author">
+                      Małgorzata Krzemińska
+                    </p>
+                    <a href="https://dogoterapiawlodzi.pl/" target="_blank"
+                      >dogoterapiawlodzi.pl</a
+                    >
+                  </div>
+                </li>
+                <li class="slide-group__single-review single-review slide">
+                  <i class="fa fa-quote-left fa-2x"></i>
+                  <p class="single-review__quote">
+                    A wonderful book on nonverbal ‘conversations’ with all
+                    animals. It addresses the essential issues of intimacy,
+                    attentiveness, and focus during pet massage. No matter your
+                    age or experience with manual techniques, this book is for
+                    you. Communication, intimacy, attentiveness—GaSa massage in
+                    three words.
+                  </p>
+                  <div>
+                    <p class="single-review__quote-author">
+                      Agata Rekun-Gregorczyk
+                    </p>
+                    <a href="http://www.vitavet.eu/" target="_blank"
+                      >vitavet.eu</a
+                    >
+                  </div>
+                </li>
+                <li class="slide-group__single-review single-review slide">
+                  <i class="fa fa-quote-left fa-2x"></i>
+                  <p class="single-review__quote">
+                    Every dog owner should read this book. For those seeking to
+                    deepen their conversations through subtle touch, GaSa
+                    massage can teach you how. You will learn techniques
+                    suitable for your dog and see how many benefits come from a
+                    new form of calm activity that soothes the emotions.
+                  </p>
+                  <div>
+                    <p class="single-review__quote-author">
+                      Joanna Hajdyła-Jarosz
+                    </p>
+                    <a href="https://psiaedukacja.pl/" target="_blank"
+                      >psiaedukacja.pl</a
+                    >
+                  </div>
+                </li>
+                <li class="slide-group__single-review single-review slide">
+                  <i class="fa fa-quote-left fa-2x"></i>
+                  <p class="single-review__quote">
+                    Unique, warm, calm, and nonintrusive. This book’s
+                    singularity and timelessness lie in the way it embraced
+                    ‘slow life’ and mindfulness long before they became trendy
+                    in Poland. The author was ahead of her time, embodying the
+                    change and peace she writes about. She upholds the vision
+                    she portrays. She is GaSa, and her authenticity is so
+                    powerful that readers who are open to letting go will read
+                    this book not because they will have to, but because they
+                    will want to.
+                  </p>
+                  <div>
+                    <p class="single-review__quote-author">
+                      Katarzyna Kucharska
+                    </p>
+                    <a href="https://futrzon.pl/" target="_blank">futrzon.pl</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="slide-wrap__slide-nav">
+              <ul>
+                <li class="bullet"></li>
+                <li class="bullet"></li>
+                <li class="bullet"></li>
+                <li class="bullet"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
       <aside class="aside-for-amazon-button">
-        <button class="aside-for-amazon-button__buy-btn">Buy on Amazon</button>
+        <a href="" target="_blank" class="aside-for-amazon-button__buy-btn"
+          >Buy on Amazon</a
+        >
       </aside>
-      <section id="for-relaxed-dogs-gallery-section"></section>
+      <section id="for-relaxed-dogs-gallery-section">
+        <div
+          class="gasabook-main-container__gallery-section gallery-section"
+          id="gallery-component"
+        >
+          <h2 class="gallery-section__title">Heard, massaged and content</h2>
+          <div class="gallery-section__gallery-description gallery-description">
+            <p>
+              GaSa massage techniques help you learn attentive observation. You
+              know your pet better when you start to trust your intuition.
+            </p>
+            <p class="important-paragraph">
+              You already have the knowledge. GaSa helps you discover it.
+            </p>
+            <ul
+              class="gallery-section__relaxed-dogs-images relaxed-dogs-images"
+            >
+              <li class="relaxed-dogs-images__single-image">
+                <img
+                  src="./images/fibi-squere.jpg"
+                  alt="blond mix dog during gasa massage"
+                />
+              </li>
+              <li class="relaxed-dogs-images__single-image">
+                <img
+                  src="./images/gandzia-squere.jpg"
+                  alt="black mix dog during gasa massage"
+                />
+              </li>
+              <li class="relaxed-dogs-images__single-image">
+                <img
+                  src="./images/iula-squere.jpg"
+                  alt="black hovawart dog during gasa massage"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer id="for-footer"></footer>
+    <footer id="for-footer">
+      <div class="gasabook-footer" id="footer-component">
+        <ul class="gasabook-footer__social-media-links">
+          <li>
+            <a href="" target="_blank"> <i class="fa fa-amazon fa-2x"></i></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/gasa_martamb/" target="_blank">
+              <i class="fa fa-instagram fa-2x"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/gasa.martamucha" target="_blank"
+              ><i class="fa fa-facebook-square fa-2x"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/company/gasa-marta-mucha-balcerek"
+              target="_blank"
+              ><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i
+            ></a>
+          </li>
+        </ul>
+        <section class="gasabook-footer__copyrights">
+          <p>2023 DeGaSa Marta Mucha-Balcerek© · kontakt@martamucha.pl</p>
+          <p>
+            Website development: Marta Mucha-Balcerek (yes, that’s me ;)) ·
+            Illustrations: Natalia Trochowska
+          </p>
+        </section>
+      </div>
+    </footer>
   </body>
 </html>
