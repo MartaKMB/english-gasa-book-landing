@@ -23,7 +23,7 @@ $(function () {
   );
   $('#for-review-section').load(
     '/html/reviewSection.html #review-component',
-    addScriptForComponent('/js/slider.js')
+    addScriptForComponent('./js/slider.js')
   );
   $('#for-relaxed-dogs-gallery-section').load(
     '/html/gallerySection.html #gallery-component'
