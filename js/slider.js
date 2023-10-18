@@ -9,11 +9,12 @@ $(function () {
 
   $bullet.first().addClass('current');
 
-  const clickSlide = () => {
+  const clickSlide = (e) => {
     window.clearInterval(autoSlide);
     isAutoSliding = false;
 
-    let slideIndex = $bullet.index($(this));
+    let clickedBullet = $bullet.filter($(e.target));
+    let slideIndex = $bullet.index(clickedBullet);
 
     updateIndex(slideIndex);
   };
@@ -43,5 +44,5 @@ $(function () {
 
   $bullet.on('click', clickSlide);
 
-  const autoSlide = window.setInterval(updateIndex, 4000);
+  const autoSlide = window.setInterval(updateIndex, 5000);
 });
