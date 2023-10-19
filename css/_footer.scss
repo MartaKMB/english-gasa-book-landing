@@ -1,7 +1,5 @@
 .gasabook-footer {
   background-color: $base-green;
-  border-bottom-left-radius: $base-border-radius;
-  border-bottom-right-radius: $base-border-radius;
   margin: 0 auto;
   max-width: 1200px;
   overflow: hidden;
@@ -32,5 +30,12 @@
       font-size: 0.85rem;
       margin-bottom: 0.5rem;
     }
+  }
+}
+
+@media (min-width: 1200px) {
+  .gasabook-footer {
+    border-bottom-left-radius: $base-border-radius;
+    border-bottom-right-radius: $base-border-radius;
   }
 }

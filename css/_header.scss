@@ -44,8 +44,6 @@ $circle-size: 450px;
     @include header-section($light-yellow);
 
     align-items: flex-start;
-    border-top-left-radius: $base-border-radius;
-    border-top-right-radius: $base-border-radius;
     padding-left: $base-side-padding;
     padding-right: 80px;
 
@@ -71,8 +69,7 @@ $circle-size: 450px;
 
   @media (min-width: 1200px) {
     .left-side-header {
-      border-top-left-radius: none;
-      border-top-right-radius: $base-border-radius;
+      border-top-left-radius: $base-border-radius;
     }
 
     .right-side-header {
@@ -84,10 +81,17 @@ $circle-size: 450px;
   .left-side-header {
     &__subtitle {
       @include header-title($medium-font-title-size, $subtitle-margin-bottom);
+
+      &:nth-child(2) {
+        @include header-title($large-font-title-size, $subtitle-margin-bottom);
+        color: $base-yellow;
+      }
     }
 
     &__title {
       @include header-title($large-font-title-size, $title-margin-bottom);
+      max-width: 350px;
+      width: 95%;
     }
 
     &__button {
