@@ -114,6 +114,7 @@ body {
   text-transform: uppercase;
   z-index: 2;
   color: #f0af02;
+  text-transform: none;
 }
 .gasabook-header .left-side-header__title {
   font-size: 2.25rem;
@@ -430,11 +431,17 @@ body {
   text-transform: uppercase;
   z-index: 2;
 }
+.about-section .left-side-description__title .gasa-name {
+  text-transform: none;
+}
 .about-section .left-side-description__subtitle {
   font-size: 1.5rem;
   margin-bottom: 20px;
   text-transform: uppercase;
   z-index: 2;
+}
+.about-section .left-side-description__subtitle .gasa-name {
+  text-transform: none;
 }
 .about-section .left-side-description__txt-about {
   font-size: 1.15rem;
@@ -626,6 +633,9 @@ body {
   text-transform: uppercase;
   width: 100%;
   z-index: 2;
+}
+.books-list-section__title .gasa-name {
+  text-transform: none;
 }
 .books-list-section__books-horizontal-list {
   align-items: center;

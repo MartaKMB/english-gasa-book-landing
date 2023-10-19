@@ -31,6 +31,10 @@ $circle-width: 190px;
   margin-bottom: $margin;
   text-transform: uppercase;
   z-index: 2;
+
+  .gasa-name {
+    text-transform: none;
+  }
 }
 
 .about-section {
