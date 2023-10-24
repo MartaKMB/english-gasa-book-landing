@@ -171,7 +171,7 @@ body {
   height: 220px;
   justify-content: flex-end;
   margin: calc(40px + 1.2rem) auto 1rem;
-  padding-bottom: 0.25rem;
+  padding: 0 0.5rem 0.25rem;
   position: relative;
   text-align: center;
   width: 160px;
@@ -180,17 +180,21 @@ body {
   box-shadow: 0px 8px 25px -5px rgb(66, 68, 90);
   left: 40px;
   position: absolute;
-  top: -40px;
+  top: -45px;
   width: 80px;
 }
 .gasabook-header .right-side-header .books-vertical-list .single-book-element__book-cover--polish {
   box-shadow: none;
   left: 20px;
+  top: -40px;
   width: 120px;
+}
+.gasabook-header .right-side-header .books-vertical-list .single-book-element__book-title {
+  font-size: 0.85rem;
 }
 .gasabook-header .right-side-header .books-vertical-list .single-book-element__book-price {
   font-weight: 600;
-  margin: 0.5em auto 0;
+  margin: 0.25em auto 0;
 }
 .gasabook-header .right-side-header .books-vertical-list .single-book-element__frame-btn {
   background-color: #fcf1da;

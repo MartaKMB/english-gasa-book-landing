@@ -127,7 +127,7 @@ $circle-size: 450px;
         height: 220px;
         justify-content: flex-end;
         margin: calc(40px + 1.2rem) auto 1rem;
-        padding-bottom: 0.25rem;
+        padding: 0 0.5rem 0.25rem;
         position: relative;
         text-align: center;
         width: 160px;
@@ -136,19 +136,24 @@ $circle-size: 450px;
           box-shadow: $base-box-shadow;
           left: calc(80px - 40px);
           position: absolute;
-          top: -40px;
+          top: -45px;
           width: 80px;
 
           &--polish {
             box-shadow: none;
             left: calc(80px - 60px);
+            top: -40px;
             width: 120px;
           }
         }
 
+        &__book-title {
+          font-size: 0.85rem;
+        }
+
         &__book-price {
           font-weight: 600;
-          margin: 0.5em auto 0;
+          margin: 0.25em auto 0;
         }
 
         &__frame-btn {
