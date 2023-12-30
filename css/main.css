@@ -363,6 +363,22 @@ body {
 .aside-for-amazon-button__buy-btn--invisible {
   display: none;
 }
+.aside-for-amazon-button__amazon-stores {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-around;
+  margin: 40px auto;
+  padding: 0 1.75rem;
+  max-width: 625px;
+}
+.aside-for-amazon-button .amazon-stores__single-element {
+  cursor: pointer;
+  list-style-type: none;
+  text-align: center;
+  text-decoration: underline;
+}
 
 .about-section {
   display: flex;

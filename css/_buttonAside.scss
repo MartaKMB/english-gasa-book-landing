@@ -15,4 +15,24 @@
     margin-right: auto;
     max-width: 400px;
   }
+
+  &__amazon-stores {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-around;
+    margin: $title-margin-bottom auto;
+    padding: 0 $base-side-padding;
+    max-width: 625px;
+  }
+
+  .amazon-stores {
+    &__single-element {
+      cursor: pointer;
+      list-style-type: none;
+      text-align: center;
+      text-decoration: underline;
+    }
+  }
 }
