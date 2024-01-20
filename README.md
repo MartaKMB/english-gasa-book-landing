@@ -20,6 +20,7 @@ Website is mobile-friendly.
 ## Links
 
 This website is running at [book.martamucha.pl](https://book.martamucha.pl/).
+Book about relaxation massage for dogs is available on [Amazon](https://www.amazon.com/dp/8394291368)
 
 ![Screenshot of LP](./images/image-for-readme.png)
 
